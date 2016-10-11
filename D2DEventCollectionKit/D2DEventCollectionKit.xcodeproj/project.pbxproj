@@ -160,7 +160,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Elmar Tampe";
+				ORGANIZATIONNAME = "Door2Door GmbH";
 				TargetAttributes = {
 					8DBC4E841DAD0D2100F16604 = {
 						CreatedOnToolsVersion = 8.0;

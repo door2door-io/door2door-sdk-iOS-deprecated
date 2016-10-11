@@ -3,7 +3,7 @@
 //  D2DEventCollectionKitTests
 //
 //  Created by Elmar Tampe on 11/10/2016.
-//  Copyright © 2016 Elmar Tampe. All rights reserved.
+//  Copyright © 2016 Door2Door GmbH. All rights reserved.
 //
 
 import XCTest
