@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DD914101DAD2BB700BD2D04 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEC49041DAD2606000B214D /* D2DEventCollectionKit.framework */; };
+		8DD914111DAD2BB700BD2D04 /* D2DEventCollectionKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEC49041DAD2606000B214D /* D2DEventCollectionKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DEC48E61DAD25F3000B214D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48E51DAD25F3000B214D /* main.m */; };
 		8DEC48E91DAD25F3000B214D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48E81DAD25F3000B214D /* AppDelegate.m */; };
 		8DEC48EC1DAD25F3000B214D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48EB1DAD25F3000B214D /* MasterViewController.m */; };
@@ -14,10 +16,16 @@
 		8DEC48F21DAD25F3000B214D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC48F01DAD25F3000B214D /* Main.storyboard */; };
 		8DEC48F41DAD25F3000B214D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC48F31DAD25F3000B214D /* Assets.xcassets */; };
 		8DEC48F71DAD25F3000B214D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC48F51DAD25F3000B214D /* LaunchScreen.storyboard */; };
-		8DEC49071DAD2617000B214D /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEC49041DAD2606000B214D /* D2DEventCollectionKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8DD914121DAD2BB700BD2D04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DEC48FE1DAD2606000B214D /* D2DEventCollectionKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DBC4E841DAD0D2100F16604;
+			remoteInfo = D2DEventCollectionKit;
+		};
 		8DEC49031DAD2606000B214D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8DEC48FE1DAD2606000B214D /* D2DEventCollectionKit.xcodeproj */;
@@ -33,6 +41,20 @@
 			remoteInfo = D2DEventCollectionKitTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD914141DAD2BB700BD2D04 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8DD914111DAD2BB700BD2D04 /* D2DEventCollectionKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8DEC48E11DAD25F3000B214D /* D2DEventCollectionKitDemoObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2DEventCollectionKitDemoObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DEC49071DAD2617000B214D /* D2DEventCollectionKit.framework in Frameworks */,
+				8DD914101DAD2BB700BD2D04 /* D2DEventCollectionKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,10 +146,12 @@
 				8DEC48DD1DAD25F3000B214D /* Sources */,
 				8DEC48DE1DAD25F3000B214D /* Frameworks */,
 				8DEC48DF1DAD25F3000B214D /* Resources */,
+				8DD914141DAD2BB700BD2D04 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8DD914131DAD2BB700BD2D04 /* PBXTargetDependency */,
 			);
 			name = D2DEventCollectionKitDemoObjc;
 			productName = D2DEventCollectionKitDemoObjc;
@@ -217,6 +241,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DD914131DAD2BB700BD2D04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = D2DEventCollectionKit;
+			targetProxy = 8DD914121DAD2BB700BD2D04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8DEC48F01DAD25F3000B214D /* Main.storyboard */ = {
@@ -331,6 +363,7 @@
 		8DEC48FC1DAD25F3000B214D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EKNBMA53EK;
 				INFOPLIST_FILE = D2DEventCollectionKitDemoObjc/Info.plist;
@@ -343,6 +376,7 @@
 		8DEC48FD1DAD25F3000B214D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EKNBMA53EK;
 				INFOPLIST_FILE = D2DEventCollectionKitDemoObjc/Info.plist;
@@ -371,6 +405,7 @@
 				8DEC48FD1DAD25F3000B214D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
