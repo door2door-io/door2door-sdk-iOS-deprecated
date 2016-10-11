@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */; };
+		8D34DBD81DAD29930043754F /* D2DEventCollectionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
-		8DBC4EA21DAD0E1D00F16604 /* D2DEventCollectionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DBC4EA01DAD0E1D00F16604 /* D2DEventCollectionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DEC48A51DAD1005000B214D /* D2DEventCollectionKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,9 +24,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKit.swift; sourceTree = "<group>"; };
+		8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2DEventCollectionKit.h; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DBC4EA01DAD0E1D00F16604 /* D2DEventCollectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2DEventCollectionKit.h; sourceTree = "<group>"; };
 		8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D2DEventCollectionKitTests.swift; sourceTree = "<group>"; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +52,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D34DBD21DAD29160043754F /* Events */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		8D34DBD31DAD29160043754F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8D34DBD61DAD29930043754F /* Umbrella-Header */ = {
+			isa = PBXGroup;
+			children = (
+				8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */,
+			);
+			path = "Umbrella-Header";
+			sourceTree = "<group>";
+		};
 		8DBC4E7B1DAD0D2100F16604 = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +95,11 @@
 		8DBC4E9F1DAD0E1D00F16604 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */,
+				8D34DBD21DAD29160043754F /* Events */,
+				8D34DBD31DAD29160043754F /* Network */,
 				8DEC48A71DAD113B000B214D /* Supporting-Files */,
-				8DBC4EA01DAD0E1D00F16604 /* D2DEventCollectionKit.h */,
+				8D34DBD61DAD29930043754F /* Umbrella-Header */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -109,7 +136,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBC4EA21DAD0E1D00F16604 /* D2DEventCollectionKit.h in Headers */,
+				8D34DBD81DAD29930043754F /* D2DEventCollectionKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +192,7 @@
 					8DBC4E841DAD0D2100F16604 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = EKNBMA53EK;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					8DBC4E8D1DAD0D2100F16604 = {
@@ -214,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +367,7 @@
 		8DBC4E9A1DAD0D2100F16604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EKNBMA53EK;
@@ -350,6 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = D2D.D2DEventCollectionKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -357,6 +388,7 @@
 		8DBC4E9B1DAD0D2100F16604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EKNBMA53EK;
@@ -376,6 +408,7 @@
 		8DBC4E9D1DAD0D2100F16604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EKNBMA53EK;
 				INFOPLIST_FILE = "Tests/Supporting-Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -388,6 +421,7 @@
 		8DBC4E9E1DAD0D2100F16604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EKNBMA53EK;
 				INFOPLIST_FILE = "Tests/Supporting-Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

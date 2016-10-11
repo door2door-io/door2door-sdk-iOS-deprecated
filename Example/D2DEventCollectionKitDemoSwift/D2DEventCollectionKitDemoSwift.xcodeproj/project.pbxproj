@@ -357,6 +357,7 @@
 				8DEC48CD1DAD2429000B214D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
