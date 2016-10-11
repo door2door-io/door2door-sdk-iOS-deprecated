@@ -37,9 +37,9 @@ into a "real" readme file for external use.
 
 ####  Useful links:
 
-https://possiblemobile.com/2016/05/ios-frameworks-part-1/
-https://possiblemobile.com/2016/08/ios-frameworks-part-2-build-and-ship/
-http://www.addthis.com/blog/2016/06/13/cocoa-touch-static-library-vs-cocoa-touch-framework/#.V_uY76Nh1gQ
-http://www.bensnider.com/abi-compatibility-whoopdty-do-what-does-it-all-mean.html
-
+- https://possiblemobile.com/2016/05/ios-frameworks-part-1/
+- https://possiblemobile.com/2016/08/ios-frameworks-part-2-build-and-ship/
+- http://www.addthis.com/blog/2016/06/13/cocoa-touch-static-library-vs-cocoa-touch-framework/#.V_uY76Nh1gQ
+- http://www.bensnider.com/abi-compatibility-whoopdty-do-what-does-it-all-mean.html
+- https://github.com/facebook/facebook-sdk-swift
 
