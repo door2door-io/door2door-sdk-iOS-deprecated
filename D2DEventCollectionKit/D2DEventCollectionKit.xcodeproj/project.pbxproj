@@ -26,9 +26,9 @@
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4EA01DAD0E1D00F16604 /* D2DEventCollectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2DEventCollectionKit.h; sourceTree = "<group>"; };
-		8DBC4EA11DAD0E1D00F16604 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D2DEventCollectionKitTests.swift; sourceTree = "<group>"; };
-		8DEC48A41DAD1005000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 		8DBC4E9F1DAD0E1D00F16604 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8DEC48A71DAD113B000B214D /* Supporting-Files */,
 				8DBC4EA01DAD0E1D00F16604 /* D2DEventCollectionKit.h */,
-				8DBC4EA11DAD0E1D00F16604 /* Info.plist */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -80,10 +80,26 @@
 		8DEC48A21DAD1005000B214D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8DEC48AA1DAD116E000B214D /* Supporting-Files */,
 				8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */,
-				8DEC48A41DAD1005000B214D /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		8DEC48A71DAD113B000B214D /* Supporting-Files */ = {
+			isa = PBXGroup;
+			children = (
+				8DEC48A81DAD113B000B214D /* Info.plist */,
+			);
+			path = "Supporting-Files";
+			sourceTree = "<group>";
+		};
+		8DEC48AA1DAD116E000B214D /* Supporting-Files */ = {
+			isa = PBXGroup;
+			children = (
+				8DEC48AB1DAD116E000B214D /* Info.plist */,
+			);
+			path = "Supporting-Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +344,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "Source/Supporting-Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = D2D.D2DEventCollectionKit;
@@ -347,7 +363,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "Source/Supporting-Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = D2D.D2DEventCollectionKit;
@@ -361,7 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = EKNBMA53EK;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting-Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = D2D.D2DEventCollectionKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,7 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = EKNBMA53EK;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting-Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = D2D.D2DEventCollectionKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
