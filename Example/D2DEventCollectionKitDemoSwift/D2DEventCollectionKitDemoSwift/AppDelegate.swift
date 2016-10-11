@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
+        
+        EventCollectionKit.register(withAppToken: "YOUR_APP_TOKEN_GOES_HERE")
+        EventCollectionKit.enableLogging(logginEnabled: true)
+        
         return true
     }
 

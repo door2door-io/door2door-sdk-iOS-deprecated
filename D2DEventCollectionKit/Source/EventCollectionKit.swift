@@ -7,3 +7,41 @@
 //
 
 import Foundation
+
+/// D2DEventCollectionKit. This class is your entry point of using the EventCollectionKit functionality.
+
+@objc (D2DEventCollectionKit) public class EventCollectionKit: NSObject, EventCollectionKitProtocol {
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Private Properties
+    // ------------------------------------------------------------------------------------------
+    private var appToken: String? = nil
+    private var loggingEnabled: Bool = false
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Initialization
+    // ------------------------------------------------------------------------------------------
+    static let sharedInstance: EventCollectionKit = {
+        
+        let sharedInstance = EventCollectionKit()
+        
+        return sharedInstance
+    }()
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Registration
+    // ------------------------------------------------------------------------------------------
+    public class func register(withAppToken: String) {
+        
+        EventCollectionKit.sharedInstance.appToken = withAppToken
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Logging
+    // ------------------------------------------------------------------------------------------
+    public class func enableLogging(logginEnabled: Bool) {
+    
+        EventCollectionKit.sharedInstance.loggingEnabled = logginEnabled
+    }
+}
