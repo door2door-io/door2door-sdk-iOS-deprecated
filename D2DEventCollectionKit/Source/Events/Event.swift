@@ -10,10 +10,45 @@ import Foundation
 
 public class Event {
     
-    public init() {}
+    // ------------------------------------------------------------------------------------------
+    // MARK: Properties
+    // ------------------------------------------------------------------------------------------
+    public private(set) var jsonDict: Dictionary<String, String>? = nil
     
-    public func jsonRepresentation() -> String {
+    // ------------------------------------------------------------------------------------------
+    // MARK: Initializer
+    // ------------------------------------------------------------------------------------------
+    public init() {
+        
+        guard let configuration =  EventCollectionKit.sharedInstance.configuration else {
+            
+            return
+        }
     
-        return "{}"
+        // Default Setup
+        self.jsonDict = ["timeStamp" : "",
+                         "application" : configuration.applicationName,
+                         "version" : configuration.applicationVersion]
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: JSON Representation
+    // ------------------------------------------------------------------------------------------
+    public func jsonData() -> Data? {
+    
+        if let dict = self.jsonDict {
+        
+            do {
+                let data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+                return data
+            }
+            catch let error as Error {
+                
+                return nil
+            }
+        }
+        
+        return nil
     }
 }

@@ -14,7 +14,12 @@ class NetworkManager {
     
     func send(event: Event) {
     
-        let eventRequest = EventRequest(jsonPayload: event.jsonRepresentation())
+        guard let data = event.jsonData() else {
+            
+            return;
+        }
+        
+        let eventRequest = EventRequest(jsonPayload:data)
         
         let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
             
@@ -24,7 +29,6 @@ class NetworkManager {
             }
             else {
             
-                
             }
         }
         

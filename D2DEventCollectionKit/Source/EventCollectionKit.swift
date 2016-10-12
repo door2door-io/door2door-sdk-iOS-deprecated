@@ -15,8 +15,8 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Private Properties
     // ------------------------------------------------------------------------------------------
-    private var appToken: String? = nil
-    public private(set) var loggingEnabled: Bool = false
+
+    public private(set) var configuration: EventCollectionKitConfiguration?
     
     private let networkManager = NetworkManager()
     
@@ -35,9 +35,16 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Registration
     // ------------------------------------------------------------------------------------------
-    public class func register(withAppToken: String) {
+    public class func register(applicationToken: String, applicationName: String, applicationVersion: String) {
         
-        EventCollectionKit.sharedInstance.appToken = withAppToken
+        EventCollectionKit.sharedInstance.configuration =
+            EventCollectionKitConfiguration(applicationToken: applicationToken,
+                                            applicationName: applicationName,
+                                            applicationVersion: applicationVersion)
+        
+        let a = Event.routeEvent()
+        
+        print(a)
     }
     
     
@@ -46,7 +53,10 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     public class func enableLogging(logginEnabled: Bool) {
     
-        EventCollectionKit.sharedInstance.loggingEnabled = logginEnabled
+        if let configuration = EventCollectionKit.sharedInstance.configuration {
+           
+            configuration.loggingEnabled = logginEnabled
+        }
     }
     
     

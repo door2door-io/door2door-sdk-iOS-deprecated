@@ -14,7 +14,7 @@ class EventRequest: NSMutableURLRequest {
     // ------------------------------------------------------------------------------------------
     // MARK: Initialization
     // ------------------------------------------------------------------------------------------
-    convenience init(jsonPayload: String) {
+    convenience init(jsonPayload: Data) {
     
         let baseURL = URL(string: "https://event.api.d2d.io")
         
@@ -39,11 +39,11 @@ class EventRequest: NSMutableURLRequest {
     // ------------------------------------------------------------------------------------------
     // MARK: HTTP Header Fields
     // ------------------------------------------------------------------------------------------
-    private func setupHTTPHeader(jsonPayload: String) {
+    private func setupHTTPHeader(jsonPayload: Data) {
         
         self.httpMethod = "POST"
         
-        self.httpBody = jsonPayload.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        self.httpBody = jsonPayload
         
         self.addValue("application/json", forHTTPHeaderField: "Content-Type")
         self.addValue("application/json", forHTTPHeaderField: "Accept")
