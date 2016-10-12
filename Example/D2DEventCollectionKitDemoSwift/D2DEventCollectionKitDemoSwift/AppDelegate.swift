@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         EventCollectionKit.register(withAppToken: "YOUR_APP_TOKEN_GOES_HERE")
         EventCollectionKit.enableLogging(logginEnabled: true)
         
+        EventCollectionKit.send(event: Event())
+        
+        
         return true
     }
 

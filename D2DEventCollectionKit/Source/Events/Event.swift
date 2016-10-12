@@ -8,6 +8,12 @@
 
 import Foundation
 
-class Event {
+public class Event {
     
+    public init() {}
+    
+    public func jsonRepresentation() -> String {
+    
+        return "{}"
+    }
 }

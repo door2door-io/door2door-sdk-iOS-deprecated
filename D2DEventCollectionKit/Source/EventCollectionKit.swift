@@ -16,12 +16,15 @@ import Foundation
     // MARK: Private Properties
     // ------------------------------------------------------------------------------------------
     private var appToken: String? = nil
-    private var loggingEnabled: Bool = false
+    public private(set) var loggingEnabled: Bool = false
+    
+    private let networkManager = NetworkManager()
+    
     
     // ------------------------------------------------------------------------------------------
     // MARK: Initialization
     // ------------------------------------------------------------------------------------------
-    static let sharedInstance: EventCollectionKit = {
+    public static let sharedInstance: EventCollectionKit = {
         
         let sharedInstance = EventCollectionKit()
         
@@ -37,11 +40,21 @@ import Foundation
         EventCollectionKit.sharedInstance.appToken = withAppToken
     }
     
+    
     // ------------------------------------------------------------------------------------------
     // MARK: Logging
     // ------------------------------------------------------------------------------------------
     public class func enableLogging(logginEnabled: Bool) {
     
         EventCollectionKit.sharedInstance.loggingEnabled = logginEnabled
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Event Sending
+    // ------------------------------------------------------------------------------------------
+    public class func send(event: Event) {
+    
+        EventCollectionKit.sharedInstance.networkManager.send(event: event)
     }
 }

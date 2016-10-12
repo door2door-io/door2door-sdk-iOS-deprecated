@@ -10,6 +10,7 @@ import Foundation
 
 protocol EventCollectionKitProtocol {
     
+    
     /**
         This method sets up the EventCollectionKit and register a given token to it.
      
@@ -17,6 +18,7 @@ protocol EventCollectionKitProtocol {
     */
     static func register(withAppToken: String)
 
+    
     /**
         For debugging purposes. You can enable logging in the terminal, if you set the logging to **true**, evey
                                 collection event is printed in the terminal. 
@@ -26,5 +28,14 @@ protocol EventCollectionKitProtocol {
                                     the value to **true**.
      */
     static func enableLogging(logginEnabled: Bool)
+    
+    
+    /**
+        Sends an event object to the event collection backend and stores it. 
+     
+        - Parameter event:  A generic **Event** object. See documentation on **Event** for more information. See also
+                            list of specific **Event** objects which can be send to the backend.
+     */
+    static func send(event: Event)
 }
 
