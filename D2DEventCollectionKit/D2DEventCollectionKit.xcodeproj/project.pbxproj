@@ -18,6 +18,9 @@
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DEC48A51DAD1005000B214D /* D2DEventCollectionKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */; };
 		8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */; };
+		8DF65EE31DAFAD5D003ADF13 /* Event+Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE21DAFAD5D003ADF13 /* Event+Place.swift */; };
+		8DF65EE51DAFAD6C003ADF13 /* Event+Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */; };
+		8DF65EE71DAFAD7A003ADF13 /* Event+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
+		8DF65EE21DAFAD5D003ADF13 /* Event+Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Place.swift"; sourceTree = "<group>"; };
+		8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Trip.swift"; sourceTree = "<group>"; };
+		8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Search.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				8D08AF621DAD46FD0019B45F /* Event.swift */,
+				8DF65EE21DAFAD5D003ADF13 /* Event+Place.swift */,
 				8D87F2611DAE9C1200FC78EB /* Event+Route.swift */,
+				8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */,
+				8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -273,8 +282,11 @@
 			files = (
 				8D08AF631DAD46FD0019B45F /* Event.swift in Sources */,
 				8D08AF611DAD46E40019B45F /* NetworkManager.swift in Sources */,
+				8DF65EE31DAFAD5D003ADF13 /* Event+Place.swift in Sources */,
 				8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */,
 				8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */,
+				8DF65EE51DAFAD6C003ADF13 /* Event+Trip.swift in Sources */,
+				8DF65EE71DAFAD7A003ADF13 /* Event+Search.swift in Sources */,
 				8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */,
 				8D87F25C1DAE2EFA00FC78EB /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,

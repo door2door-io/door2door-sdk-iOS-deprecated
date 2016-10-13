@@ -21,8 +21,18 @@ public class Event {
     // ------------------------------------------------------------------------------------------
     public init() {
         
+        self.setupCommonJSONFields()
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Setup
+    // ------------------------------------------------------------------------------------------
+    private func setupCommonJSONFields() {
+    
         guard let configuration =  EventCollectionKit.sharedInstance.configuration else {
             
+            // TODO: Error handling.
             return
         }
         
@@ -30,9 +40,20 @@ public class Event {
         let applicationName = configuration.applicationName
         let applicationVersion = configuration.applicationVersion
         
+        var deviceID = ""
+        
+        if let identifier = UIDevice.current.identifierForVendor {
+            
+            deviceID = identifier.uuidString
+        }
+        
+        let uuid = UUID().uuidString
+        
         self.jsonPayload = ["timeStamp" : timeStamp,
                             "application" : applicationName,
-                            "version" : applicationVersion]
+                            "version" : applicationVersion,
+                            "uuid" : uuid,
+                            "device_id" : deviceID]
     }
     
     
