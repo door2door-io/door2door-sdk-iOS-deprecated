@@ -22,7 +22,7 @@ class ISO8601DateTest: XCTestCase {
         let timeStampString = Date.ISO8601TimeStampString()
         
         let reveresedDateFromString = Date.dateFromISO8601String(dateString:timeStampString)
-        
+
         XCTAssertFalse(dateNow == reveresedDateFromString)
     }
 }

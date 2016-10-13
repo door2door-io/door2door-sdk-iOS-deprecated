@@ -11,9 +11,18 @@ import Foundation
 extension Date {
 
     // ------------------------------------------------------------------------------------------
-    // MARK: Date Formatter
+    // MARK: Static Date Formatter
     // ------------------------------------------------------------------------------------------
-    private static var ISO8601DateFormatter: DateFormatter = {
+    @available(iOS 10.0, *)
+    private static var ISO8601DateFormatter_iOS10: ISO8601DateFormatter = {
+        
+        let dateFormatter = ISO8601DateFormatter()
+        
+        return dateFormatter
+    }()
+    
+    
+    private static var ISO8601DateFormatter_iOS9: DateFormatter = {
     
         let dateFormatter = DateFormatter()
         
@@ -36,7 +45,12 @@ extension Date {
     
     public func ISO8601TimeString() -> String {
         
-        return Date.ISO8601DateFormatter.string(from: self)
+        if #available(iOS 10.0, *) {
+            
+            return Date.ISO8601DateFormatter_iOS10.string(from: self)
+        }
+        
+        return Date.ISO8601DateFormatter_iOS9.string(from: self)
     }
     
     
@@ -45,6 +59,11 @@ extension Date {
     // ------------------------------------------------------------------------------------------
     public static func dateFromISO8601String(dateString: String) -> Date? {
         
-        return Date.ISO8601DateFormatter.date(from: dateString)
+        if #available(iOS 10.0, *) {
+            
+            return Date.ISO8601DateFormatter_iOS10.date(from: dateString)
+        }
+        
+        return Date.ISO8601DateFormatter_iOS9.date(from: dateString)
     }
 }
