@@ -17,6 +17,7 @@
 		8D87F2621DAE9C1200FC78EB /* Event+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87F2611DAE9C1200FC78EB /* Event+Route.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DEC48A51DAD1005000B214D /* D2DEventCollectionKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */; };
+		8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D2DEventCollectionKitTests.swift; sourceTree = "<group>"; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		8DBC4E9F1DAD0E1D00F16604 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8DF65EDF1DAF86E8003ADF13 /* Extensions */,
 				8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */,
 				8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */,
 				8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */,
@@ -145,6 +148,14 @@
 				8DEC48AB1DAD116E000B214D /* Info.plist */,
 			);
 			path = "Supporting-Files";
+			sourceTree = "<group>";
+		};
+		8DF65EDF1DAF86E8003ADF13 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				8D08AF631DAD46FD0019B45F /* Event.swift in Sources */,
 				8D08AF611DAD46E40019B45F /* NetworkManager.swift in Sources */,
 				8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */,
+				8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */,
 				8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */,
 				8D87F25C1DAE2EFA00FC78EB /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
