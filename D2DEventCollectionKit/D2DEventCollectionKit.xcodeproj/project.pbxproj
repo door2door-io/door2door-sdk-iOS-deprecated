@@ -113,11 +113,11 @@
 		8DBC4E9F1DAD0E1D00F16604 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8DF65EDF1DAF86E8003ADF13 /* Extensions */,
 				8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */,
 				8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */,
 				8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */,
 				8D34DBD21DAD29160043754F /* Events */,
+				8DF65EDF1DAF86E8003ADF13 /* Extensions */,
 				8D34DBD31DAD29160043754F /* Network */,
 				8DEC48A71DAD113B000B214D /* Supporting-Files */,
 				8D34DBD61DAD29930043754F /* Umbrella-Header */,

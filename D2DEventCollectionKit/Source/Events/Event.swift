@@ -13,7 +13,8 @@ public class Event {
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
-    public private(set) var jsonDict: Dictionary<String, String>? = nil
+    public private(set) var jsonPayload: Dictionary<String, String>? = nil
+    
     
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
@@ -24,11 +25,14 @@ public class Event {
             
             return
         }
-    
-        // Default Setup
-        self.jsonDict = ["timeStamp" : "",
-                         "application" : configuration.applicationName,
-                         "version" : configuration.applicationVersion]
+        
+        let timeStamp = Date.ISO8601TimeStampString()
+        let applicationName = configuration.applicationName
+        let applicationVersion = configuration.applicationVersion
+        
+        self.jsonPayload = ["timeStamp" : timeStamp,
+                            "application" : applicationName,
+                            "version" : applicationVersion]
     }
     
     
@@ -37,10 +41,10 @@ public class Event {
     // ------------------------------------------------------------------------------------------
     public func jsonData() -> Data? {
     
-        if let dict = self.jsonDict {
+        if let payload = self.jsonPayload {
         
             do {
-                let data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+                let data = try JSONSerialization.data(withJSONObject: payload, options: .prettyPrinted)
                 return data
             }
             catch let error as Error {
