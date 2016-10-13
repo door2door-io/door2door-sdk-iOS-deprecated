@@ -26,7 +26,7 @@ extension Date {
     
     
     // ------------------------------------------------------------------------------------------
-    // MARK: ISO8601 Date Strings
+    // MARK: ISO8601 Date String
     // ------------------------------------------------------------------------------------------
     public static func ISO8601TimeStampString() -> String {
         
@@ -36,6 +36,15 @@ extension Date {
     
     public func ISO8601TimeString() -> String {
         
-        return Date.ISO8601DateFormatter.string(from: self).appending("Z")
+        return Date.ISO8601DateFormatter.string(from: self)
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: ISO8601 Date Object
+    // ------------------------------------------------------------------------------------------
+    public static func dateFromISO8601String(dateString: String) -> Date? {
+        
+        return Date.ISO8601DateFormatter.date(from: dateString)
     }
 }
