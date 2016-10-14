@@ -42,9 +42,9 @@ import Foundation
                                             applicationName: applicationName,
                                             applicationVersion: applicationVersion)
         
-        let a = Event.routeEvent()
+        let lang = Session.deviceType()
         
-        print(a)
+        print(lang)
     }
     
     

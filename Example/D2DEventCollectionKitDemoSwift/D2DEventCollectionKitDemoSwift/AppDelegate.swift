@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         EventCollectionKit.enableLogging(logginEnabled: true)
         
         EventCollectionKit.send(event: Event())
+        
     }
     
 

@@ -21,6 +21,7 @@
 		8DF65EE51DAFAD6C003ADF13 /* Event+Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */; };
 		8DF65EE71DAFAD7A003ADF13 /* Event+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */; };
 		8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */; };
+		8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EEB1DB12A32003ADF13 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Trip.swift"; sourceTree = "<group>"; };
 		8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Search.swift"; sourceTree = "<group>"; };
 		8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
+		8DF65EEB1DB12A32003ADF13 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */,
 				8D34DBD21DAD29160043754F /* Events */,
 				8DF65EDF1DAF86E8003ADF13 /* Extensions */,
+				8DF65EEA1DB12A21003ADF13 /* Helper */,
 				8D34DBD31DAD29160043754F /* Network */,
 				8DEC48A71DAD113B000B214D /* Supporting-Files */,
 				8D34DBD61DAD29930043754F /* Umbrella-Header */,
@@ -165,6 +168,14 @@
 				8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8DF65EEA1DB12A21003ADF13 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8DF65EEB1DB12A32003ADF13 /* Session.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				8DF65EE51DAFAD6C003ADF13 /* Event+Trip.swift in Sources */,
 				8DF65EE71DAFAD7A003ADF13 /* Event+Search.swift in Sources */,
 				8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */,
+				8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */,
 				8D87F25C1DAE2EFA00FC78EB /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
 				8D87F2621DAE9C1200FC78EB /* Event+Route.swift in Sources */,

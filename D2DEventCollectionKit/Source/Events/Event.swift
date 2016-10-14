@@ -40,6 +40,12 @@ public class Event {
         let applicationName = configuration.applicationName
         let applicationVersion = configuration.applicationVersion
         
+        // TODO: This needs to be tracked as well
+        // - device language
+        // - device
+        // - os version
+        // - country
+        
         var deviceID = ""
         
         if let identifier = UIDevice.current.identifierForVendor {
