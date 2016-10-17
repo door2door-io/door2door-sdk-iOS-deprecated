@@ -7,4 +7,4 @@ branches:
  - develop
 script:
 - xcodebuild -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -target D2DEventCollectionKitTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-- xcodebuild test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -target D2DEventCollectionKitTests -scheme D2DEventCollectionKitTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xcodebuild test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme D2DEventCollectionKitTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
