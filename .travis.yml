@@ -3,6 +3,9 @@ xcode_sdk: iphonesimulator
 osx_image: xcode8
 xcode_project: D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj
 xcode_scheme: D2DEventCollectionKitTests
+before_install:
+- brew update 
+- brew install xctool
 branches:
   only:
   - develop
