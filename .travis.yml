@@ -1,8 +1,8 @@
 language: objective-c
-xcode_sdk: iphonesimulator
 osx_image: xcode8
 xcode_project: D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj
 xcode_scheme: D2DEventCollectionKit
+xcode_sdk: iphonesimulator
 branches:
   only:
   - develop
