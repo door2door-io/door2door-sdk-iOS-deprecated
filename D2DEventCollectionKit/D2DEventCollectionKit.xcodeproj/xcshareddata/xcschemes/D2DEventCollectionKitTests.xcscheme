@@ -12,16 +12,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DBC4E8D1DAD0D2100F16604"
-               BuildableName = "D2DEventCollectionKitTests.xctest"
-               BlueprintName = "D2DEventCollectionKitTests"
-               ReferencedContainer = "container:D2DEventCollectionKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -64,15 +54,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
-            BuildableName = "D2DEventCollectionKitDemoSwift.app"
-            BlueprintName = "D2DEventCollectionKitDemoSwift"
-            ReferencedContainer = "container:../Example/D2DEventCollectionKitDemoSwift/D2DEventCollectionKitDemoSwift.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
