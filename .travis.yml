@@ -6,4 +6,4 @@ branches:
  only:
  - develop
 script:
-- xcodebuild test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'
+- xctool test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'
