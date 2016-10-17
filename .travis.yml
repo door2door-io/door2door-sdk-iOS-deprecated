@@ -6,7 +6,3 @@ xcode_scheme: D2DEventCollectionKitTests
 branches:
   only:
   - develop
-before_install:
-- brew update 
-- brew install xctool
-- pod repo update
