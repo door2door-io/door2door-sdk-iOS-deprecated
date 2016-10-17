@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import D2DEventCollectionKit
 
 class D2DEventCollectionKitTests: XCTestCase {
     
