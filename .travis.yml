@@ -5,3 +5,6 @@ xcode_project: D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj
 branches:
   only:
   - develop
+script:
+	- xcodebuild -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -target D2DEventCollectionKitTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  
