@@ -9,3 +9,5 @@ before_install:
 branches:
   only:
   - develop
+  script:
+  - "./D2DEventCollectionKit/Scripts/test.sh"
