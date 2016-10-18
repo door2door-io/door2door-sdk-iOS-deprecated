@@ -3,11 +3,12 @@ xcode_sdk: iphonesimulator
 osx_image: xcode8
 xcode_project: D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj
 branches:
- only:
- - develop
+  only:
+  - develop
 script:
-- xcodebuild test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'
+- xcodebuild test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme
+  D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'
 notifications:
   slack:
     rooms:
-      secure: D9V/hW6wS1Lt/ovEHxk2ppXAUyoIDBuKWjyaTw9xnkgRe11Jm6v9NikbLNA+jx5cun+OTQ1YtwWTZyK89/G5c174ETw2EtKH/3rh61C4I4KYqKAgp1qQdmjrXBIzbFdH6mIQiu+C02Fk426y+nLI6c10dDrQgBYcWHKTDA+zA6A=
+      secure: f4q7wi1KjcqtOouXXxhNZu6wcYoWB4i952n91wuE3L2FgLz5sHD495jT1/jMEgvfLBAiCWTymqYnRCWHO0dWui1OaIhqyKvOIGNXODQ12oZ2iceq8Y4pbfmGmr0npCTSxZkTT1j09EiehwcO7Yq7CMiYgqiR6xN+Bc96rzZjEdtwvBU3Q1Y2+uVkfU6AN8VJtPBoxzeatqlNJVKt0tHprAx69zw4TjxsehPxeK30wXPekiBkI0bRDAM2Ro6aiSbV6wtplk5YUSu6UHZ+ExW93Qlypa3eRv9d5knTyYCSbQ8Q7Of0tIiZlRFPUwfSPbQbSv/bx4JUeMDSUOjWbo7HtfJfl8Z7ss6XiZkVaiLaFIl/AL0TyBhz1dxhjb0rs2IZSh3+RXYxkDRENJptIin1Si9df+uBxFPEoqiisKHfypShoRRe8PF0XAQpmspt8cTWHVc5sASAT/XfaAIRVt5kgFhPAuYRB6pQ0Vn+B/69trVt9uaFzzB43J0p4zLCc2VNU+YgA1lbEXVfmSPv1z0zcaHJlJ/jnojNjp/z9IoE9kou7fS1wTJLCY9dlbIzlYDUHbR6jivumPG1Ei9pR9bhF5w6q9QcBRL7lifikZIROBQ4YvwFctf9A5W3srXI/f9z35iPuItEp9RiPKfOHI+KM4L7TCxYClIOwtMaaNuilFc=
