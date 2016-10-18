@@ -27,6 +27,15 @@
             </LocationScenarioReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
+            BuildableName = "D2DEventCollectionKitDemoSwift.app"
+            BlueprintName = "D2DEventCollectionKitDemoSwift"
+            ReferencedContainer = "container:../Example/D2DEventCollectionKitDemoSwift/D2DEventCollectionKitDemoSwift.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -40,6 +49,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
+            BuildableName = "D2DEventCollectionKitDemoSwift.app"
+            BlueprintName = "D2DEventCollectionKitDemoSwift"
+            ReferencedContainer = "container:../Example/D2DEventCollectionKitDemoSwift/D2DEventCollectionKitDemoSwift.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -49,6 +68,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
+            BuildableName = "D2DEventCollectionKitDemoSwift.app"
+            BlueprintName = "D2DEventCollectionKitDemoSwift"
+            ReferencedContainer = "container:../Example/D2DEventCollectionKitDemoSwift/D2DEventCollectionKitDemoSwift.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
