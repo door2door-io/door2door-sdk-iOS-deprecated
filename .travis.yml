@@ -7,7 +7,7 @@ branches:
   - develop
 script:
 - xcodebuild -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme
-  D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' test
+  D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test
 notifications:
   slack:
     rooms:
