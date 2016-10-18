@@ -6,9 +6,8 @@ branches:
  only:
  - develop
 script:
-- xcodebuild test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' xcpretty -t; exit ${PIPESTATUS[0]}
+- xcodebuild test -project D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj -scheme D2DEventCollectionKitTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'
 notifications:
   slack:
-	on_success: always
     rooms:
       secure: D9V/hW6wS1Lt/ovEHxk2ppXAUyoIDBuKWjyaTw9xnkgRe11Jm6v9NikbLNA+jx5cun+OTQ1YtwWTZyK89/G5c174ETw2EtKH/3rh61C4I4KYqKAgp1qQdmjrXBIzbFdH6mIQiu+C02Fk426y+nLI6c10dDrQgBYcWHKTDA+zA6A=
