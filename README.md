@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/door2door-io/D2DEventCollectionKit.svg?token=mxhR6CvH5qpkhU4ysi1n&branch=develop)](https://travis-ci.com/door2door-io/D2DEventCollectionKit)
+
 # D2DEventCollectionKit
 Framework to track events in swift applications and transfer the data to the "D2D Event Collection" backend. 
 
