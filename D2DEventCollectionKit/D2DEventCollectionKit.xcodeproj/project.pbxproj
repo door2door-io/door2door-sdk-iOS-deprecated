@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */; };
+		8D08AF611DAD46E40019B45F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D08AF601DAD46E40019B45F /* NetworkManager.swift */; };
+		8D08AF631DAD46FD0019B45F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D08AF621DAD46FD0019B45F /* Event.swift */; };
 		8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */; };
 		8D34DBD81DAD29930043754F /* D2DEventCollectionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D87F25C1DAE2EFA00FC78EB /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87F25B1DAE2EFA00FC78EB /* EventRequest.swift */; };
+		8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */; };
+		8D87F2621DAE9C1200FC78EB /* Event+Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87F2611DAE9C1200FC78EB /* Event+Route.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
-		8DEC48A51DAD1005000B214D /* D2DEventCollectionKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */; };
+		8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */; };
+		8DF65EE31DAFAD5D003ADF13 /* Event+Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE21DAFAD5D003ADF13 /* Event+Place.swift */; };
+		8DF65EE51DAFAD6C003ADF13 /* Event+Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */; };
+		8DF65EE71DAFAD7A003ADF13 /* Event+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */; };
+		8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */; };
+		8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EEB1DB12A32003ADF13 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +35,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitProtocol.swift; sourceTree = "<group>"; };
+		8D08AF601DAD46E40019B45F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8D08AF621DAD46FD0019B45F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKit.swift; sourceTree = "<group>"; };
 		8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2DEventCollectionKit.h; sourceTree = "<group>"; };
+		8D87F25B1DAE2EFA00FC78EB /* EventRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
+		8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitConfiguration.swift; sourceTree = "<group>"; };
+		8D87F2611DAE9C1200FC78EB /* Event+Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Route.swift"; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D2DEventCollectionKitTests.swift; sourceTree = "<group>"; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
+		8DF65EE21DAFAD5D003ADF13 /* Event+Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Place.swift"; sourceTree = "<group>"; };
+		8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Trip.swift"; sourceTree = "<group>"; };
+		8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Search.swift"; sourceTree = "<group>"; };
+		8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
+		8DF65EEB1DB12A32003ADF13 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +77,11 @@
 		8D34DBD21DAD29160043754F /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				8D08AF621DAD46FD0019B45F /* Event.swift */,
+				8DF65EE21DAFAD5D003ADF13 /* Event+Place.swift */,
+				8D87F2611DAE9C1200FC78EB /* Event+Route.swift */,
+				8DF65EE61DAFAD7A003ADF13 /* Event+Search.swift */,
+				8DF65EE41DAFAD6C003ADF13 /* Event+Trip.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -62,6 +89,8 @@
 		8D34DBD31DAD29160043754F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8D08AF601DAD46E40019B45F /* NetworkManager.swift */,
+				8D87F25B1DAE2EFA00FC78EB /* EventRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -77,9 +106,9 @@
 		8DBC4E7B1DAD0D2100F16604 = {
 			isa = PBXGroup;
 			children = (
-				8DBC4E861DAD0D2100F16604 /* Products */,
 				8DBC4E9F1DAD0E1D00F16604 /* Source */,
 				8DEC48A21DAD1005000B214D /* Tests */,
+				8DBC4E861DAD0D2100F16604 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */,
+				8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */,
+				8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */,
 				8D34DBD21DAD29160043754F /* Events */,
+				8DF65EDF1DAF86E8003ADF13 /* Extensions */,
+				8DF65EEA1DB12A21003ADF13 /* Helper */,
 				8D34DBD31DAD29160043754F /* Network */,
 				8DEC48A71DAD113B000B214D /* Supporting-Files */,
 				8D34DBD61DAD29930043754F /* Umbrella-Header */,
@@ -107,8 +140,8 @@
 		8DEC48A21DAD1005000B214D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */,
 				8DEC48AA1DAD116E000B214D /* Supporting-Files */,
-				8DEC48A31DAD1005000B214D /* D2DEventCollectionKitTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -127,6 +160,22 @@
 				8DEC48AB1DAD116E000B214D /* Info.plist */,
 			);
 			path = "Supporting-Files";
+			sourceTree = "<group>";
+		};
+		8DF65EDF1DAF86E8003ADF13 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8DF65EEA1DB12A21003ADF13 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8DF65EEB1DB12A32003ADF13 /* Session.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +291,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D08AF631DAD46FD0019B45F /* Event.swift in Sources */,
+				8D08AF611DAD46E40019B45F /* NetworkManager.swift in Sources */,
+				8DF65EE31DAFAD5D003ADF13 /* Event+Place.swift in Sources */,
+				8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */,
+				8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */,
+				8DF65EE51DAFAD6C003ADF13 /* Event+Trip.swift in Sources */,
+				8DF65EE71DAFAD7A003ADF13 /* Event+Search.swift in Sources */,
+				8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */,
+				8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */,
+				8D87F25C1DAE2EFA00FC78EB /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
+				8D87F2621DAE9C1200FC78EB /* Event+Route.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DEC48A51DAD1005000B214D /* D2DEventCollectionKitTests.swift in Sources */,
+				8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
