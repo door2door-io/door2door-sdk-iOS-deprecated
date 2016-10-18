@@ -15,6 +15,9 @@ into a "real" readme file for external use.
 - As small as possible - Footprint of the SDK should be small
 - Documentation 
 - No typos in methods, comments and documentation
+- Transport Security
+- App thinning
+- 
 
 
 #### Testing:
@@ -33,6 +36,12 @@ into a "real" readme file for external use.
 - Cocoapods
 - Carthage 
 - Swift package manager
+
+#### Documentation
+
+- http://nshipster.com/swift-documentation/
+- HeaderDoc 
+- https://github.com/realm/**jazzy**
 
 
 ####  Useful links:
