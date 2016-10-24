@@ -21,7 +21,6 @@
 		8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DF0759D1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0759C1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift */; };
-		8DF0759F1DB7923C003644DD /* EventRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0759E1DB7923C003644DD /* EventRequestTest.swift */; };
 		8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */; };
 		8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */; };
 		8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EEB1DB12A32003ADF13 /* Session.swift */; };
@@ -55,7 +54,6 @@
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DF0759C1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitConfigurationTest.swift; sourceTree = "<group>"; };
-		8DF0759E1DB7923C003644DD /* EventRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequestTest.swift; sourceTree = "<group>"; };
 		8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
 		8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
 		8DF65EEB1DB12A32003ADF13 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				8DF0759C1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift */,
-				8DF0759E1DB7923C003644DD /* EventRequestTest.swift */,
 				8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */,
 				8DEC48AA1DAD116E000B214D /* Supporting-Files */,
 			);
@@ -322,7 +319,6 @@
 			files = (
 				8DF0759D1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift in Sources */,
 				8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */,
-				8DF0759F1DB7923C003644DD /* EventRequestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
