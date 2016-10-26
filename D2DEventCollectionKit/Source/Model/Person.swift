@@ -1,5 +1,5 @@
 //
-//  Trip.swift
+//  Person.swift
 //  D2DEventCollectionKit
 //
 //  Created by Elmar Tampe on 26/10/2016.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-public struct Trip {
-
-
+public struct Person {
+    
+    public fileprivate(set) var client: Client?
+    
 }
