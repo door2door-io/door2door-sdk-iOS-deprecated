@@ -10,5 +10,22 @@ import Foundation
 
 public struct Trip {
 
-
+    // ------------------------------------------------------------------------------------------
+    // MARK: Properties
+    // ------------------------------------------------------------------------------------------
+    public fileprivate(set) var origin: Place
+    public fileprivate(set) var destination: Place
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: JSON Representation
+    // ------------------------------------------------------------------------------------------
+    public func jsonRepresentation() -> Dictionary<String, Any>? {
+        
+        var jsonDictionary = [String: Any]()
+        
+        jsonDictionary["origin"] = self.origin.jsonRepresentation()
+        jsonDictionary["destination"] = self.destination.jsonRepresentation()
+        
+        return jsonDictionary
+    }
 }

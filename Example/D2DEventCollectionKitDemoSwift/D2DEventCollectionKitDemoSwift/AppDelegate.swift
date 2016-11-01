@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         // Add D2DEventCollectionKit integration
         self.setupTrackingIntegration()
         
+        self.testSearchEvent()
+        
         return true
     }
     
@@ -38,36 +40,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                                     applicationVersion: "1.0.0")
         
         EventCollectionKit.enableLogging(logginEnabled: true)
+    }
+    
+    
+    fileprivate func testSearchEvent() {
+    
+        let searchEvent  = TripEvent.tripSearchEvent(originLatitude: 99.00,
+                                                     originLongitude: 99.0,
+                                                     originName: "Alexanderplatz",
+                                                     originStreet: "Alexanderstrasse 1",
+                                                     originCity: "Berlin",
+                                                     originPostalCode: "10119",
+                                                     originCountry: "Germany",
+                                                     destinationLatitude: 99.00,
+                                                     destinationLongitude: 99.00,
+                                                     destinationName: nil,
+                                                     destinationStreet: "Torstrasse 109",
+                                                     destinationCity: "Germany",
+                                                     destinationPostalCode: "10119",
+                                                     destinationCountry: "Germany")
         
-        EventCollectionKit.send(event: Event())
-        
+        EventCollectionKit.send(event: searchEvent)
     }
     
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
     // MARK: - Split view
-
+    
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
         guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
         guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }

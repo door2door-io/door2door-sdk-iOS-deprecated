@@ -10,6 +10,21 @@ import Foundation
 
 public struct Person {
     
-    public fileprivate(set) var client: Client?
+    // ------------------------------------------------------------------------------------------
+    // MARK: Properties
+    // ------------------------------------------------------------------------------------------
+    public fileprivate(set) var client: Client
     
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: JSON Representation
+    // ------------------------------------------------------------------------------------------
+    public func jsonRepresentation() -> Dictionary<String, Any>? {
+     
+        var jsonDictionary = [String: Any]()
+        
+        jsonDictionary["client"] = self.client.jsonRepresentation()
+        
+        return jsonDictionary
+    }
 }

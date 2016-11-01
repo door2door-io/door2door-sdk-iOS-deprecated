@@ -13,26 +13,31 @@ class NetworkManager {
     let dataSession = URLSession(configuration: .default)
     
     func send(event: Event) {
-    
-//        guard let data = event.jsonData() else {
-//            
-//            return;
-//        }
-//        
-//        let eventRequest = EventRequest(jsonPayload:data)
-//        
-//        let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
-//            
-//            if let error: Error = error {
-//            
-//                print(error.localizedDescription)
-//            }
-//            else {
-//            
-//            }
-//        }
-//        
-//        eventTask.resume()
-//    }
+        
+        let jsonDict = event.jsonRepresentation()
+        
+        do {
+            
+            let jsonData = try JSONSerialization.data(withJSONObject: jsonDict as Any, options: .prettyPrinted)
+            
+            let eventRequest = EventRequest(jsonPayload:jsonData)
+            
+            let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
+
+                if let error: Error = error {
+            
+                    print(error.localizedDescription)
+                }
+                else {
+                        
+                }
+            }
+                    
+            eventTask.resume()
+
+        } catch  {
+            
+            print("Fucking Error!")
+        }
     }
 }

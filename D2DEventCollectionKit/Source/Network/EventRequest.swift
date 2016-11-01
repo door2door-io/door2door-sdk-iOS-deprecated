@@ -16,7 +16,7 @@ class EventRequest: NSMutableURLRequest {
     // ------------------------------------------------------------------------------------------
     convenience init(jsonPayload: Data) {
     
-        let baseURL = URL(string: "https://r4on31jbrh.execute-api.eu-central-1.amazonaws.com/dev/events")
+        let baseURL = URL(string: "https://events.d2di.net/v1/trips")
         
         self.init(url: baseURL!, cachePolicy:.useProtocolCachePolicy, timeoutInterval: 60.0)
         
