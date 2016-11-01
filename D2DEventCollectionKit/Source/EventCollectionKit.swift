@@ -41,10 +41,6 @@ import Foundation
             EventCollectionKitConfiguration(applicationToken: applicationToken,
                                             applicationName: applicationName,
                                             applicationVersion: applicationVersion)
-        
-        let lang = Session.deviceType()
-        
-        print(lang)
     }
     
     
