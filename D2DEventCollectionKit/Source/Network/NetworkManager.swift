@@ -27,17 +27,20 @@ class NetworkManager {
         do {
             
             let jsonData = try JSONSerialization.data(withJSONObject: jsonDict as Any, options: .prettyPrinted)
-            
+
+            self.printPayload(payloadData: jsonData)
+
             let eventRequest = self.requestForEventType(eventType: event.eventType, jsonPayload: jsonData)
             
             let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
-
+                
                 if let error: Error = error {
             
-                    print(error.localizedDescription)
+                    self.printObject(object: error as Any)
                 }
                 else {
-                        
+                    
+                    self.printObject(object: response as Any)
                 }
             }
                     
@@ -45,7 +48,7 @@ class NetworkManager {
 
         } catch  {
             
-            print("JSON serialization failed.")
+            self.printObject(object: "JSON serialization failed." as Any)
         }
     }
     
@@ -58,6 +61,29 @@ class NetworkManager {
         switch eventType {
             case .tripSearch:
                 return EventRequest.tripSearchRequest(jsonPayload: jsonPayload)
+        }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Helper
+    // ------------------------------------------------------------------------------------------
+    private func printPayload(payloadData: Data) {
+    
+        if (EventCollectionKit.sharedInstance.configuration?.loggingEnabled)! {
+            
+            if let payloadString = String(data: payloadData, encoding: String.Encoding.utf8) {
+            
+                print(payloadString)
+            }
+        }
+    }
+    
+    
+    private func printObject(object: Any) {
+    
+        if (EventCollectionKit.sharedInstance.configuration?.loggingEnabled)! {
+            
+            print(object)
         }
     }
 }
