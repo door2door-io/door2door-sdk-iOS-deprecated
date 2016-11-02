@@ -10,7 +10,6 @@ import Foundation
 
 protocol EventCollectionKitProtocol {
     
-    
     /**
         This method sets up the EventCollectionKit and register a given token to it.
      
