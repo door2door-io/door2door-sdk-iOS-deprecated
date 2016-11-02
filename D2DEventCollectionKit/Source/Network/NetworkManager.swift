@@ -8,30 +8,82 @@
 
 import Foundation
 
+
 class NetworkManager {
     
+    // ------------------------------------------------------------------------------------------
+    // MARK: Properties
+    // ------------------------------------------------------------------------------------------
     let dataSession = URLSession(configuration: .default)
     
-    func send(event: Event) {
     
-        guard let data = event.jsonData() else {
-            
-            return;
-        }
+    // ------------------------------------------------------------------------------------------
+    // MARK: Network Reqquest
+    // ------------------------------------------------------------------------------------------
+    func send(event: Event) {
         
-        let eventRequest = EventRequest(jsonPayload:data)
+        let jsonDict = event.jsonRepresentation()
         
-        let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
+        do {
             
-            if let error: Error = error {
+            let jsonData = try JSONSerialization.data(withJSONObject: jsonDict as Any, options: .prettyPrinted)
+
+            self.printPayload(payloadData: jsonData)
+
+            let eventRequest = self.requestForEventType(eventType: event.eventType, jsonPayload: jsonData)
             
-                print(error.localizedDescription)
+            let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
+                
+                if let error: Error = error {
+            
+                    self.printObject(object: error as Any)
+                }
+                else {
+                    
+                    self.printObject(object: response as Any)
+                }
             }
-            else {
+                    
+            eventTask.resume()
+
+        } catch  {
             
+            self.printObject(object: "JSON serialization failed." as Any)
+        }
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: URLRequest Object by EventType
+    // ------------------------------------------------------------------------------------------
+    private func requestForEventType(eventType: EventType, jsonPayload: Data) -> EventRequest {
+    
+        switch eventType {
+            case .tripSearch:
+                return EventRequest.tripSearchRequest(jsonPayload: jsonPayload)
+        }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Helper
+    // ------------------------------------------------------------------------------------------
+    private func printPayload(payloadData: Data) {
+    
+        if (EventCollectionKit.sharedInstance.configuration?.loggingEnabled)! {
+            
+            if let payloadString = String(data: payloadData, encoding: String.Encoding.utf8) {
+            
+                print(payloadString)
             }
         }
-        
-        eventTask.resume()
+    }
+    
+    
+    private func printObject(object: Any) {
+    
+        if (EventCollectionKit.sharedInstance.configuration?.loggingEnabled)! {
+            
+            print(object)
+        }
     }
 }

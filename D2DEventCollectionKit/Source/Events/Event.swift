@@ -2,84 +2,64 @@
 //  Event.swift
 //  D2DEventCollectionKit
 //
-//  Created by Elmar Tampe on 11/10/2016.
+//  Created by Elmar Tampe on 25/10/2016.
 //  Copyright © 2016 Door2Door GmbH. All rights reserved.
 //
 
 import Foundation
 
-public class Event {
+
+public enum Stage {
     
+    case create
+}
+
+public enum EventType {
+    
+    case tripSearch
+}
+
+
+public class Event: NSObject {
+
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
-    public private(set) var jsonPayload: Dictionary<String, String>? = nil
-    
-    
+    public fileprivate(set) var stage: Stage
+    public fileprivate(set) var timeStamp: String
+    public fileprivate(set) var actor: Person
+    public fileprivate(set) var eventType: EventType
+ 
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    public init() {
+    public init(stage: Stage, actor: Person, eventType: EventType) {
+    
+        self.stage = stage
+        self.actor = actor
+        self.eventType = eventType
         
-        self.setupCommonJSONFields()
+        self.timeStamp = Date.ISO8601TimeStampString()
     }
     
     
     // ------------------------------------------------------------------------------------------
-    // MARK: Setup
+    // MARK: Object to JSON Dict Mapping
     // ------------------------------------------------------------------------------------------
-    private func setupCommonJSONFields() {
+    public func jsonRepresentation() -> Dictionary<String, Any>? {
     
-        guard let configuration =  EventCollectionKit.sharedInstance.configuration else {
-            
-            // TODO: Error handling.
-            return
-        }
-        
-        let timeStamp = Date.ISO8601TimeStampString()
-        let applicationName = configuration.applicationName
-        let applicationVersion = configuration.applicationVersion
-        
-        // TODO: This needs to be tracked as well
-        // - device language
-        // - device
-        // - os version
-        // - country
-        
-        var deviceID = ""
-        
-        if let identifier = UIDevice.current.identifierForVendor {
-            
-            deviceID = identifier.uuidString
-        }
-        
-        let uuid = UUID().uuidString
-        
-        self.jsonPayload = ["timeStamp" : timeStamp,
-                            "application" : applicationName,
-                            "version" : applicationVersion,
-                            "uuid" : uuid,
-                            "device_id" : deviceID]
+        fatalError("Subclass must Override.")
     }
     
     
     // ------------------------------------------------------------------------------------------
-    // MARK: JSON Representation
+    // MARK: Helper
     // ------------------------------------------------------------------------------------------
-    public func jsonData() -> Data? {
+    public func stageString(stage: Stage) -> String {
     
-        if let payload = self.jsonPayload {
-        
-            do {
-                let data = try JSONSerialization.data(withJSONObject: payload, options: .prettyPrinted)
-                return data
-            }
-            catch let error as Error {
-                
-                return nil
-            }
+        switch stage {
+            case .create:
+                return "Create"
         }
-        
-        return nil
     }
 }
