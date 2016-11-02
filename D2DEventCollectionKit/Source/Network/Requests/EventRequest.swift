@@ -14,13 +14,12 @@ class EventRequest: NSMutableURLRequest {
     // ------------------------------------------------------------------------------------------
     // MARK: Initialization
     // ------------------------------------------------------------------------------------------
-    convenience init(jsonPayload: Data) {
-    
-        let baseURL = URL(string: "https://events.d2di.net/v1/trips")
+    convenience init(url: URL, jsonPayload: Data) {
         
-        self.init(url: baseURL!, cachePolicy:.useProtocolCachePolicy, timeoutInterval: 60.0)
+        self.init(url: url, cachePolicy:.useProtocolCachePolicy, timeoutInterval: 60.0)
         
-        self.setupHTTPHeader(jsonPayload: jsonPayload)
+        self.setHTTPHeaderFields()
+        self.setJSONBody(jsonPayload: jsonPayload)
     }
     
     
@@ -37,13 +36,27 @@ class EventRequest: NSMutableURLRequest {
     
     
     // ------------------------------------------------------------------------------------------
-    // MARK: HTTP Header Fields
+    // MARK: Base URL
     // ------------------------------------------------------------------------------------------
-    private func setupHTTPHeader(jsonPayload: Data) {
-        
-        self.httpMethod = "POST"
-        
+    public class func baseURLString() -> String {
+    
+        return "https://events.d2di.net"
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: JSON Body
+    // ------------------------------------------------------------------------------------------
+    private func setJSONBody(jsonPayload: Data) {
+    
         self.httpBody = jsonPayload
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: HTTP Header
+    // ------------------------------------------------------------------------------------------
+    private func setHTTPHeaderFields() {
         
         self.addValue("application/json", forHTTPHeaderField: "Content-Type")
         self.addValue("application/json", forHTTPHeaderField: "Accept")
