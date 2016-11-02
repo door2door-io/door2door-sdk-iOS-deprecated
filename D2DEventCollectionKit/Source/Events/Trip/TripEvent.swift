@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class TripEvent: Event {
+@objc (D2DTripEvent) public class TripEvent: Event {
     
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
