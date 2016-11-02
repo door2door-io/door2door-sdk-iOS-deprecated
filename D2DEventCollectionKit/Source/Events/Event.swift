@@ -14,6 +14,11 @@ public enum Stage {
     case create
 }
 
+public enum EventType {
+    
+    case tripSearch
+}
+
 
 public class Event: NSObject {
 
@@ -23,14 +28,17 @@ public class Event: NSObject {
     public fileprivate(set) var stage: Stage
     public fileprivate(set) var timeStamp: String
     public fileprivate(set) var actor: Person
+    public fileprivate(set) var eventType: EventType
  
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    public init(stage: Stage, actor: Person) {
+    public init(stage: Stage, actor: Person, eventType: EventType) {
     
         self.stage = stage
         self.actor = actor
+        self.eventType = eventType
+        
         self.timeStamp = Date.ISO8601TimeStampString()
     }
     
@@ -40,7 +48,7 @@ public class Event: NSObject {
     // ------------------------------------------------------------------------------------------
     public func jsonRepresentation() -> Dictionary<String, Any>? {
     
-        fatalError("Subclass must 0verride")
+        fatalError("Subclass must Override.")
     }
     
     

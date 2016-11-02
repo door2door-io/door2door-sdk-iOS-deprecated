@@ -16,17 +16,17 @@ extension TripEvent {
     public class func tripSearchEvent(originLatitude: Double,
                                       originLongitude: Double,
                                       originName: String?,
-                                      originStreet: String,
-                                      originCity: String,
-                                      originPostalCode: String,
-                                      originCountry: String,
+                                      originStreet: String?,
+                                      originCity: String?,
+                                      originPostalCode: String?,
+                                      originCountry: String?,
                                       destinationLatitude: Double,
                                       destinationLongitude: Double,
                                       destinationName: String?,
-                                      destinationStreet: String,
-                                      destinationCity: String,
-                                      destinationPostalCode: String,
-                                      destinationCountry: String) -> TripEvent {
+                                      destinationStreet: String?,
+                                      destinationCity: String?,
+                                      destinationPostalCode: String?,
+                                      destinationCountry: String?) -> TripEvent {
         
         let origin = Place(latitude: originLatitude,
                            longitude: originLongitude,
@@ -46,7 +46,7 @@ extension TripEvent {
         
         let trip = Trip(origin: origin, destination: destination)
         
-        let tripSearchEvent = TripEvent(stage: .create, trip: trip)
+        let tripSearchEvent = TripEvent(stage: .create, trip: trip, eventType: .tripSearch)
         
         return tripSearchEvent
     }

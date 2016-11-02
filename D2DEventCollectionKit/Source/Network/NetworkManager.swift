@@ -8,10 +8,18 @@
 
 import Foundation
 
+
 class NetworkManager {
     
+    // ------------------------------------------------------------------------------------------
+    // MARK: Properties
+    // ------------------------------------------------------------------------------------------
     let dataSession = URLSession(configuration: .default)
     
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Network Reqquest
+    // ------------------------------------------------------------------------------------------
     func send(event: Event) {
         
         let jsonDict = event.jsonRepresentation()
@@ -20,7 +28,7 @@ class NetworkManager {
             
             let jsonData = try JSONSerialization.data(withJSONObject: jsonDict as Any, options: .prettyPrinted)
             
-            let eventRequest = EventRequest(jsonPayload:jsonData)
+            let eventRequest = self.requestForEventType(eventType: event.eventType, jsonPayload: jsonData)
             
             let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
 
@@ -37,7 +45,19 @@ class NetworkManager {
 
         } catch  {
             
-            print("Fucking Error!")
+            print("JSON serialization failed.")
+        }
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: URLRequest Object by EventType
+    // ------------------------------------------------------------------------------------------
+    private func requestForEventType(eventType: EventType, jsonPayload: Data) -> EventRequest {
+    
+        switch eventType {
+            case .tripSearch:
+                return EventRequest.tripSearchRequest(jsonPayload: jsonPayload)
         }
     }
 }

@@ -19,7 +19,7 @@ public class TripEvent: Event {
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    public init(stage: Stage, trip: Trip) {
+    public init(stage: Stage, trip: Trip, eventType: EventType) {
         
         self.trip = trip
     
@@ -32,7 +32,7 @@ public class TripEvent: Event {
         
         let actor = Person(client: client)
         
-        super.init(stage: stage, actor: actor)
+        super.init(stage: stage, actor: actor, eventType: eventType)
     }
     
     // ------------------------------------------------------------------------------------------
