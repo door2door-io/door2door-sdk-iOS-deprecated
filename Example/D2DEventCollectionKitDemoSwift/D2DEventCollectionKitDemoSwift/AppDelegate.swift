@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         // Add D2DEventCollectionKit integration
         self.setupTrackingIntegration()
         
+        // Create one test event for a trip search
         self.testSearchEvent()
         
         return true
@@ -45,22 +46,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     fileprivate func testSearchEvent() {
     
-        let searchEvent  = TripEvent.tripSearchEvent(originLatitude: 99.00,
-                                                     originLongitude: 99.0,
-                                                     originName: "Alexanderplatz",
-                                                     originStreet: "Alexanderstrasse 1",
-                                                     originCity: "Berlin",
-                                                     originPostalCode: "10119",
-                                                     originCountry: "Germany",
-                                                     destinationLatitude: 99.00,
-                                                     destinationLongitude: 99.00,
-                                                     destinationName: nil,
-                                                     destinationStreet: "Torstrasse 109",
-                                                     destinationCity: "Germany",
-                                                     destinationPostalCode: "10119",
-                                                     destinationCountry: "Germany")
+        let tripSearchEvent  = TripEvent.tripSearchEvent(originLatitude: 99.00,
+                                                         originLongitude: 99.0,
+                                                         originName: "Alexanderplatz",
+                                                         originStreet: "Alexanderstrasse 1",
+                                                         originCity: "Berlin",
+                                                         originPostalCode: "10119",
+                                                         originCountry: "Germany",
+                                                         destinationLatitude: 99.00,
+                                                         destinationLongitude: 99.00,
+                                                         destinationName: nil,
+                                                         destinationStreet: "Torstrasse 109",
+                                                         destinationCity: "Germany",
+                                                         destinationPostalCode: "10119",
+                                                         destinationCountry: "Germany")
         
-        EventCollectionKit.send(event: searchEvent)
+        EventCollectionKit.send(event: tripSearchEvent)
     }
     
 
