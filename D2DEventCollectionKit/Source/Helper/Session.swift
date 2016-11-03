@@ -52,6 +52,12 @@ class Session {
         return UIDevice().systemVersion
     }
     
+    
+    public class func plattform() -> String? {
+        
+        return "iOS"
+    }
+    
 
     // ------------------------------------------------------------------------------------------
     // MARK: Identifier Settings

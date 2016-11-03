@@ -26,8 +26,8 @@ import Foundation
         let configuration = EventCollectionKit.sharedInstance.configuration
         
         let client = Client(deviceID: Session.deviceID(),
-                            plattform:Session.deviceType(),
-                            application: configuration?.applicationName,
+                            plattform: Session.plattform(),
+                            application: configuration?.applicationName ?? "Not set.",
                             version: configuration?.applicationVersion)
         
         let actor = Person(client: client)
