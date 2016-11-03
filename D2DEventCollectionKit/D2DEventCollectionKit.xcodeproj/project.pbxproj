@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */; };
+		8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4D01DCB94EB008130D2 /* PersonTest.swift */; };
+		8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */; };
 		8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */; };
 		8D08AF611DAD46E40019B45F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D08AF601DAD46E40019B45F /* NetworkManager.swift */; };
 		8D0AF6301DC0BEF30002DECD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF62F1DC0BEF30002DECD /* Person.swift */; };
@@ -17,15 +20,16 @@
 		8D34DBD81DAD29930043754F /* D2DEventCollectionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */; };
 		8DB0FB511DCB544D00634467 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB0FB501DCB544D00634467 /* Logger.swift */; };
+		8DB4DD121DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD0F1DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift */; };
+		8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */; };
+		8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD141DCB9AF6004194F7 /* TripTest.swift */; };
 		8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA82BD1DBF8E7F003017CB /* Event.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
-		8DF0759D1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0759C1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift */; };
 		8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */; };
 		8DF3687D1DCA33C20088A730 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687B1DCA33C20088A730 /* EventRequest.swift */; };
 		8DF368821DCA37350088A730 /* TripEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF368801DCA37350088A730 /* TripEvent.swift */; };
 		8DF368831DCA39030088A730 /* TripEvent+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */; };
 		8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */; };
-		8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */; };
 		8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF65EEB1DB12A32003ADF13 /* Session.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
+		8D06B4D01DCB94EB008130D2 /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
+		8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTest.swift; sourceTree = "<group>"; };
 		8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitProtocol.swift; sourceTree = "<group>"; };
 		8D08AF601DAD46E40019B45F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8D0AF62F1DC0BEF30002DECD /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -50,18 +57,19 @@
 		8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2DEventCollectionKit.h; sourceTree = "<group>"; };
 		8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitConfiguration.swift; sourceTree = "<group>"; };
 		8DB0FB501DCB544D00634467 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8DB4DD0F1DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitConfigurationTest.swift; sourceTree = "<group>"; };
+		8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
+		8DB4DD141DCB9AF6004194F7 /* TripTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTest.swift; sourceTree = "<group>"; };
 		8DBA82BD1DBF8E7F003017CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DF0759C1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitConfigurationTest.swift; sourceTree = "<group>"; };
 		8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventRequest+TripSearch.swift"; sourceTree = "<group>"; };
 		8DF3687B1DCA33C20088A730 /* EventRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
 		8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+Search.swift"; sourceTree = "<group>"; };
 		8DF368801DCA37350088A730 /* TripEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripEvent.swift; sourceTree = "<group>"; };
 		8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
-		8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
 		8DF65EEB1DB12A32003ADF13 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D06B4CE1DCB94EB008130D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */,
+				8D06B4D01DCB94EB008130D2 /* PersonTest.swift */,
+				8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */,
+				8DB4DD141DCB9AF6004194F7 /* TripTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8D34828D1DB66F0A0066A405 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +129,22 @@
 				8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */,
 			);
 			path = "Umbrella-Header";
+			sourceTree = "<group>";
+		};
+		8DB4DD0E1DCB9607004194F7 /* EventCollectionKit */ = {
+			isa = PBXGroup;
+			children = (
+				8DB4DD0F1DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift */,
+			);
+			path = EventCollectionKit;
+			sourceTree = "<group>";
+		};
+		8DB4DD101DCB9607004194F7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8DBA82BA1DBF8D30003017CB /* Events */ = {
@@ -159,8 +194,9 @@
 		8DEC48A21DAD1005000B214D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8DF0759C1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift */,
-				8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */,
+				8DB4DD0E1DCB9607004194F7 /* EventCollectionKit */,
+				8DB4DD101DCB9607004194F7 /* Helper */,
+				8D06B4CE1DCB94EB008130D2 /* Model */,
 				8DEC48AA1DAD116E000B214D /* Supporting-Files */,
 			);
 			path = Tests;
@@ -353,8 +389,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DF0759D1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift in Sources */,
-				8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */,
+				8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */,
+				8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */,
+				8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */,
+				8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */,
+				8DB4DD121DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift in Sources */,
+				8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

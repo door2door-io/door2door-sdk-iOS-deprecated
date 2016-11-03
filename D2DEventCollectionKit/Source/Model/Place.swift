@@ -13,8 +13,8 @@ public struct Place {
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
-    public fileprivate(set) var latitude: Double
-    public fileprivate(set) var longitude: Double
+    public fileprivate(set) var latitude: Float
+    public fileprivate(set) var longitude: Float
     public fileprivate(set) var name: String?
     public fileprivate(set) var street: String?
     public fileprivate(set) var city: String?

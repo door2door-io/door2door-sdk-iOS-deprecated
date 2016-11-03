@@ -26,7 +26,7 @@ import Foundation
         let configuration = EventCollectionKit.sharedInstance.configuration
         
         let client = Client(deviceID: Session.deviceID(),
-                            plattform:Session.deviceType(),
+                            plattform: Session.plattform(),
                             application: configuration?.applicationName,
                             version: configuration?.applicationVersion)
         
