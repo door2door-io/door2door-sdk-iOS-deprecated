@@ -57,7 +57,6 @@ class Logger {
         if Logger.isLoggingEnabled() {
         
             print(response)
-
         }
     }
     
