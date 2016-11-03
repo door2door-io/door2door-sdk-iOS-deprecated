@@ -12,29 +12,42 @@ import XCTest
 
 class PlaceTest: XCTestCase {
     
+    func testValidateJSONWithAllParameterSet() {
+        
+        let place = Place(latitude: 52.5300641,
+                          longitude: 13.4008385,
+                          name: "Door2Door HQ",
+                          street: "Torstrasse 109",
+                          city: "Berlin",
+                          postalCode:"10119",
+                          country: "Germany")
+        
+        guard let jsonRepresentation = place.jsonRepresentation() else {
+            
+            XCTAssertTrue(false)
+            return
+        }
+        
+        XCTAssertTrue(jsonRepresentation.count == 7)
+    }
+    
+    
     func testValidateJSONOnlyWithRequiredParameterSet() {
         
-        let client = Client(deviceID: nil,
-                            plattform:nil,
-                            application: "Test Application",
-                            version: nil)
+        let place = Place(latitude: 52.5300641,
+                          longitude: 13.4008385,
+                          name: nil,
+                          street: nil,
+                          city: nil,
+                          postalCode: nil,
+                          country: nil)
         
-        guard let clientJSONRepresentation = client.jsonRepresentation() else {
+        guard let jsonRepresentation = place.jsonRepresentation() else {
             
-            XCTAssertTrue(true)
+            XCTAssertTrue(false)
             return
         }
         
-        XCTAssertTrue(clientJSONRepresentation.count == 4)
-        
-        let person = Person(client: client)
-        
-        guard let personJSONRepresentation = person.jsonRepresentation() else {
-            
-            XCTAssertTrue(true)
-            return
-        }
-        
-        XCTAssertTrue(personJSONRepresentation.count == 1)
+        XCTAssertTrue(jsonRepresentation.count == 7)
     }
 }

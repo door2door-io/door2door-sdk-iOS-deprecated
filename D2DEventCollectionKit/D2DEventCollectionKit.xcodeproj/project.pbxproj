@@ -22,6 +22,7 @@
 		8DB0FB511DCB544D00634467 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB0FB501DCB544D00634467 /* Logger.swift */; };
 		8DB4DD121DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD0F1DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift */; };
 		8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */; };
+		8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD141DCB9AF6004194F7 /* TripTest.swift */; };
 		8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA82BD1DBF8E7F003017CB /* Event.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */; };
@@ -58,6 +59,7 @@
 		8DB0FB501DCB544D00634467 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8DB4DD0F1DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitConfigurationTest.swift; sourceTree = "<group>"; };
 		8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
+		8DB4DD141DCB9AF6004194F7 /* TripTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTest.swift; sourceTree = "<group>"; };
 		8DBA82BD1DBF8E7F003017CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */,
 				8D06B4D01DCB94EB008130D2 /* PersonTest.swift */,
 				8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */,
+				8DB4DD141DCB9AF6004194F7 /* TripTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */,
 				8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */,
 				8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */,
 				8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */,
