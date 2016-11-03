@@ -57,8 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                                                          destinationLongitude: 13.4008385,
                                                          destinationName: "Door2Door HQ",
                                                          destinationStreet: "Torstrasse 109",
-                                                         destinationCity: "Germany",
-                                                         destinationPostalCode: "10119",
+                                                         destinationCity: "Berlin",
+                                                         destinationPostalCode: "10178",
                                                          destinationCountry: "Germany")
         
         EventCollectionKit.send(event: tripSearchEvent)

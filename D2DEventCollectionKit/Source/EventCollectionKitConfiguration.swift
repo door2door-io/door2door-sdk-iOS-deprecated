@@ -13,9 +13,9 @@ public class EventCollectionKitConfiguration {
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
-    public private(set) var applicationToken: String = ""
-    public private(set) var applicationName: String = ""
-    public private(set) var applicationVersion: String = ""
+    public private(set) var applicationToken: String!
+    public private(set) var applicationName: String!
+    public private(set) var applicationVersion: String?
     
     
     // ------------------------------------------------------------------------------------------
@@ -27,9 +27,11 @@ public class EventCollectionKitConfiguration {
             
             if let configuration = EventCollectionKit.sharedInstance.configuration {
                 
+                let versionString = configuration.applicationVersion ?? "Version not set"
+                
                 Logger.printString(string: "Token: " + configuration.applicationToken + "\n" +
                                             "Name: " + configuration.applicationName + "\n" +
-                                            "Version: " + configuration.applicationVersion + "\n")
+                                            "Version: " + versionString + "\n")
             }
         }
     }
@@ -38,7 +40,7 @@ public class EventCollectionKitConfiguration {
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    convenience init(applicationToken: String, applicationName: String, applicationVersion: String) {
+    convenience init(applicationToken: String, applicationName: String, applicationVersion: String?) {
     
         self.init()
         

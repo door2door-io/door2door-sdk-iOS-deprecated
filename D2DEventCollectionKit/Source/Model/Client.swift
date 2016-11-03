@@ -15,21 +15,21 @@ public struct Client {
     // ------------------------------------------------------------------------------------------
     public fileprivate(set) var deviceID: String?
     public fileprivate(set) var plattform: String?
-    public fileprivate(set) var application: String?
+    public fileprivate(set) var application: String!
     public fileprivate(set) var version: String?
-    
+        
     
     // ------------------------------------------------------------------------------------------
     // MARK: JSON Representation
     // ------------------------------------------------------------------------------------------
-    public func jsonRepresentation() -> Dictionary<String, String>? {
+    public func jsonRepresentation() -> Dictionary<String, Any>? {
         
-        var jsonDictionary = [String: String]()
+        var jsonDictionary = [String: Any]()
         
-        jsonDictionary["device_id"] = self.deviceID
-        jsonDictionary["platform"] = self.plattform
+        jsonDictionary["device_id"] = self.deviceID ?? NSNull()
+        jsonDictionary["platform"] = self.plattform ?? NSNull()
         jsonDictionary["application"] = self.application
-        jsonDictionary["version"] = self.version
+        jsonDictionary["version"] = self.version ?? NSNull()
         
         return jsonDictionary
     }
