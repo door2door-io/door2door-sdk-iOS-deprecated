@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */; };
+		8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4D01DCB94EB008130D2 /* PersonTest.swift */; };
+		8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */; };
 		8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */; };
 		8D08AF611DAD46E40019B45F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D08AF601DAD46E40019B45F /* NetworkManager.swift */; };
 		8D0AF6301DC0BEF30002DECD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF62F1DC0BEF30002DECD /* Person.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
+		8D06B4D01DCB94EB008130D2 /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
+		8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTest.swift; sourceTree = "<group>"; };
 		8D08AF5E1DAD30BF0019B45F /* EventCollectionKitProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitProtocol.swift; sourceTree = "<group>"; };
 		8D08AF601DAD46E40019B45F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8D0AF62F1DC0BEF30002DECD /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -84,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D06B4CE1DCB94EB008130D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */,
+				8D06B4D01DCB94EB008130D2 /* PersonTest.swift */,
+				8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8D34828D1DB66F0A0066A405 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +175,7 @@
 		8DEC48A21DAD1005000B214D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8D06B4CE1DCB94EB008130D2 /* Model */,
 				8DF0759C1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift */,
 				8DF65EE81DAFB17B003ADF13 /* ISO8601DateTest.swift */,
 				8DEC48AA1DAD116E000B214D /* Supporting-Files */,
@@ -353,7 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */,
 				8DF0759D1DB7777A003644DD /* EventCollectionKitConfigurationTest.swift in Sources */,
+				8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */,
+				8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */,
 				8DF65EE91DAFB17B003ADF13 /* ISO8601DateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
