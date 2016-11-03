@@ -17,7 +17,23 @@ public class EventCollectionKitConfiguration {
     public private(set) var applicationName: String = ""
     public private(set) var applicationVersion: String = ""
     
-    public var loggingEnabled = false
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Computed Property
+    // ------------------------------------------------------------------------------------------
+    public var loggingEnabled: Bool? {
+        
+        didSet(oldloggingEnabled) {
+            
+            if let configuration = EventCollectionKit.sharedInstance.configuration {
+                
+                Logger.printString(string: "Token: " + configuration.applicationToken + "\n" +
+                                            "Name: " + configuration.applicationName + "\n" +
+                                            "Version: " + configuration.applicationVersion + "\n")
+            }
+        }
+    }
+    
     
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
@@ -25,6 +41,8 @@ public class EventCollectionKitConfiguration {
     convenience init(applicationToken: String, applicationName: String, applicationVersion: String) {
     
         self.init()
+        
+        self.loggingEnabled = false
         
         self.applicationToken = applicationToken
         self.applicationName = applicationName
