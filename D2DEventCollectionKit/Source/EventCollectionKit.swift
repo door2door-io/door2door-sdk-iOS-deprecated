@@ -35,7 +35,7 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Registration
     // ------------------------------------------------------------------------------------------
-    public class func register(applicationToken: String, applicationName: String, applicationVersion: String) {
+    public class func register(applicationToken: String, applicationName: String, applicationVersion: String?) {
         
         EventCollectionKit.sharedInstance.configuration =
             EventCollectionKitConfiguration(applicationToken: applicationToken,

@@ -15,7 +15,7 @@ public struct Client {
     // ------------------------------------------------------------------------------------------
     public fileprivate(set) var deviceID: String?
     public fileprivate(set) var plattform: String?
-    public fileprivate(set) var application: String
+    public fileprivate(set) var application: String!
     public fileprivate(set) var version: String?
         
     

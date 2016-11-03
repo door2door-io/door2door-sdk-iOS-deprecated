@@ -17,7 +17,7 @@ protocol EventCollectionKitProtocol {
         - Parameter applicationName: The name of your application.
         - Parameter applicationVersion: The version number of your application.
     */
-    static func register(applicationToken: String, applicationName: String, applicationVersion: String)
+    static func register(applicationToken: String, applicationName: String, applicationVersion: String?)
 
     
     /**
