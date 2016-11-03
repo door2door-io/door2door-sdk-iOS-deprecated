@@ -60,7 +60,16 @@ import Foundation
     // MARK: Event Sending
     // ------------------------------------------------------------------------------------------
     public class func send(event: Event) {
-    
-        EventCollectionKit.sharedInstance.networkManager.send(event: event)
+        
+        if let _ = EventCollectionKit.sharedInstance.configuration {
+        
+            EventCollectionKit.sharedInstance.networkManager.send(event: event)
+        }
+        else {
+        
+            print("[!]Initialization Error. You need to register the <EventCollectionKit> before sending events. \n" +
+                    "Use <public class func register(applicationToken: String, applicationName: String, applicationVersion: String?)>" +
+                    " to register the SDK and start collecting data.")
+        }
     }
 }
