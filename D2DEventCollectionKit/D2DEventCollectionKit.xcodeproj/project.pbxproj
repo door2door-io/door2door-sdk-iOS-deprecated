@@ -25,6 +25,7 @@
 		8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD141DCB9AF6004194F7 /* TripTest.swift */; };
 		8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA82BD1DBF8E7F003017CB /* Event.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
+		8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */; };
 		8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */; };
 		8DF3687D1DCA33C20088A730 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687B1DCA33C20088A730 /* EventRequest.swift */; };
 		8DF368821DCA37350088A730 /* TripEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF368801DCA37350088A730 /* TripEvent.swift */; };
@@ -63,6 +64,7 @@
 		8DBA82BD1DBF8E7F003017CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventRequest+TripSearch.swift"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		8DF65EEA1DB12A21003ADF13 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */,
 				8DB0FB501DCB544D00634467 /* Logger.swift */,
 				8DF65EEB1DB12A32003ADF13 /* Session.swift */,
 			);
@@ -379,6 +382,7 @@
 				8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */,
 				8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */,
 				8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */,
+				8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */,
 				8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */,
 				8DF3687D1DCA33C20088A730 /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
