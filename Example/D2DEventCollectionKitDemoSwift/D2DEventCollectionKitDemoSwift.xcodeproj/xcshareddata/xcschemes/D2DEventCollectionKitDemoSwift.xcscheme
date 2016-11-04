@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0810"
-   version = "1.7">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
+               BuildableName = "D2DEventCollectionKitDemoSwift.app"
+               BlueprintName = "D2DEventCollectionKitDemoSwift"
+               ReferencedContainer = "container:D2DEventCollectionKitDemoSwift.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -19,12 +35,8 @@
                BlueprintIdentifier = "8DBC4E8D1DAD0D2100F16604"
                BuildableName = "D2DEventCollectionKitTests.xctest"
                BlueprintName = "D2DEventCollectionKitTests"
-               ReferencedContainer = "container:D2DEventCollectionKit.xcodeproj">
+               ReferencedContainer = "container:../../D2DEventCollectionKit/D2DEventCollectionKit.xcodeproj">
             </BuildableReference>
-            <LocationScenarioReference
-               identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
-               referenceType = "1">
-            </LocationScenarioReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
@@ -33,7 +45,7 @@
             BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
             BuildableName = "D2DEventCollectionKitDemoSwift.app"
             BlueprintName = "D2DEventCollectionKitDemoSwift"
-            ReferencedContainer = "container:../Example/D2DEventCollectionKitDemoSwift/D2DEventCollectionKitDemoSwift.xcodeproj">
+            ReferencedContainer = "container:D2DEventCollectionKitDemoSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,7 +68,7 @@
             BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
             BuildableName = "D2DEventCollectionKitDemoSwift.app"
             BlueprintName = "D2DEventCollectionKitDemoSwift"
-            ReferencedContainer = "container:../Example/D2DEventCollectionKitDemoSwift/D2DEventCollectionKitDemoSwift.xcodeproj">
+            ReferencedContainer = "container:D2DEventCollectionKitDemoSwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -68,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DEC48B61DAD2429000B214D"
             BuildableName = "D2DEventCollectionKitDemoSwift.app"
             BlueprintName = "D2DEventCollectionKitDemoSwift"
-            ReferencedContainer = "container:../Example/D2DEventCollectionKitDemoSwift/D2DEventCollectionKitDemoSwift.xcodeproj">
+            ReferencedContainer = "container:D2DEventCollectionKitDemoSwift.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

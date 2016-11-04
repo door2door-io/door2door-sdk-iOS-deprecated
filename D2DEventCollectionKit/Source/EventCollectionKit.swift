@@ -7,3 +7,75 @@
 //
 
 import Foundation
+
+/// D2DEventCollectionKit. This class is your entry point of using the EventCollectionKit functionality.
+
+@objc (D2DEventCollectionKit) public class EventCollectionKit: NSObject, EventCollectionKitProtocol {
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Private Properties
+    // ------------------------------------------------------------------------------------------
+
+    internal private(set) var configuration: EventCollectionKitConfiguration?
+    
+    private let networkManager = NetworkManager()
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Singleton
+    // ------------------------------------------------------------------------------------------
+    internal static let sharedInstance = EventCollectionKit()
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Registration
+    // ------------------------------------------------------------------------------------------
+    public class func register(applicationToken: String, applicationName: String, applicationVersion: String?) {
+        
+        EventCollectionKit.sharedInstance.configuration =
+            EventCollectionKitConfiguration(applicationToken: applicationToken,
+                                            applicationName: applicationName,
+                                            applicationVersion: applicationVersion)
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Logging
+    // ------------------------------------------------------------------------------------------
+    public class func enableLogging(loggingEnabled: Bool) {
+    
+        if let configuration = EventCollectionKit.sharedInstance.configuration {
+           
+            configuration.loggingEnabled = loggingEnabled
+        }
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Event Sending
+    // ------------------------------------------------------------------------------------------
+    public class func send(event: Event) {
+        
+        if EventCollectionKit.isRegistered() {
+        
+            EventCollectionKit.sharedInstance.networkManager.send(event: event)
+        }
+        else {
+
+            assertionFailure(ErrorMessages.registrationErrorDescription())
+        }
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Helper
+    // ------------------------------------------------------------------------------------------
+    private class func isRegistered () -> Bool {
+    
+        if let _ = EventCollectionKit.sharedInstance.configuration {
+        
+            return true
+        }
+        
+        return false
+    }
+}

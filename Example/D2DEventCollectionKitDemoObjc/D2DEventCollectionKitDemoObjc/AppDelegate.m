@@ -24,7 +24,48 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    
+    // Add D2DEventCollectionKit integration
+    [self setupTrackingIntegration];
+    
+    // Create one test event for a trip search
+    [self testSearchEvent];
+    
     return YES;
+}
+
+
+// ------------------------------------------------------------------------------------------
+// MARK: D2DEventCollectionKit Functions
+// ------------------------------------------------------------------------------------------
+- (void)setupTrackingIntegration {
+    
+    [D2DEventCollectionKit registerWithApplicationToken:@"YOUR_APP_TOKEN_GOES_HERE"
+                                        applicationName:@"Ally App"
+                                     applicationVersion:@"1.0.0"];
+    
+    [D2DEventCollectionKit enableLoggingWithLogginEnabled:YES];
+}
+
+
+- (void)testSearchEvent {
+    
+   D2DTripEvent *tripEvent = [D2DTripEvent tripSearchEventWithOriginLatitude:52.5230554
+                                                             originLongitude:13.4122575
+                                                                  originName:@"Alexanderplatz"
+                                                                originStreet:@"Alexanderplatz"
+                                                                  originCity:@"Berlin"
+                                                            originPostalCode:@"10178"
+                                                               originCountry:@"Germany"
+                                                         destinationLatitude:52.5300641
+                                                        destinationLongitude:13.4008385
+                                                             destinationName:@"Door2Door HQ"
+                                                           destinationStreet:@"Torstrasse 109"
+                                                             destinationCity:@"Berlin"
+                                                       destinationPostalCode:@"10119"
+                                                          destinationCountry:@"Germany"];
+    
+    [D2DEventCollectionKit sendWithEvent:tripEvent];
 }
 
 
