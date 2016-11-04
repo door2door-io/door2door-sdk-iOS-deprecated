@@ -27,7 +27,7 @@ import Foundation
         
         let client = Client(deviceID: Session.deviceID(),
                             plattform: Session.plattform(),
-                            application: configuration?.applicationName,
+                            application:(configuration?.applicationName)!,
                             version: configuration?.applicationVersion)
         
         let actor = Person(client: client)
