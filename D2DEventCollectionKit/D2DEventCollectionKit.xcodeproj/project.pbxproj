@@ -27,8 +27,8 @@
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */; };
 		8DCCE3B81DCCA4FE0077B12C /* EventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */; };
-		8DCCE3BC1DCCC06A0077B12C /* EventRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3BB1DCCC06A0077B12C /* EventRequestTest.swift */; };
-		8DCCE3BE1DCCDC0E0077B12C /* TripSearchRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3BD1DCCDC0E0077B12C /* TripSearchRequestTest.swift */; };
+		8DCCE3C41DCCDE1A0077B12C /* EventRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */; };
+		8DCCE3C51DCCDE1E0077B12C /* TripSearchRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3C11DCCDE140077B12C /* TripSearchRequestTest.swift */; };
 		8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */; };
 		8DF3687D1DCA33C20088A730 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687B1DCA33C20088A730 /* EventRequest.swift */; };
 		8DF368821DCA37350088A730 /* TripEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF368801DCA37350088A730 /* TripEvent.swift */; };
@@ -69,8 +69,8 @@
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTest.swift; sourceTree = "<group>"; };
-		8DCCE3BB1DCCC06A0077B12C /* EventRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequestTest.swift; sourceTree = "<group>"; };
-		8DCCE3BD1DCCDC0E0077B12C /* TripSearchRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSearchRequestTest.swift; sourceTree = "<group>"; };
+		8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequestTest.swift; sourceTree = "<group>"; };
+		8DCCE3C11DCCDE140077B12C /* TripSearchRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSearchRequestTest.swift; sourceTree = "<group>"; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventRequest+TripSearch.swift"; sourceTree = "<group>"; };
@@ -207,11 +207,11 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
-		8DCCE3BA1DCCC03E0077B12C /* Network */ = {
+		8DCCE3BF1DCCDE140077B12C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8DCCE3BB1DCCC06A0077B12C /* EventRequestTest.swift */,
-				8DCCE3BD1DCCDC0E0077B12C /* TripSearchRequestTest.swift */,
+				8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */,
+				8DCCE3C11DCCDE140077B12C /* TripSearchRequestTest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -219,11 +219,11 @@
 		8DEC48A21DAD1005000B214D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8DCCE3BF1DCCDE140077B12C /* Network */,
 				8DB4DD0E1DCB9607004194F7 /* EventCollectionKit */,
 				8DCCE3B61DCCA4EC0077B12C /* Events */,
 				8DB4DD101DCB9607004194F7 /* Helper */,
 				8D06B4CE1DCB94EB008130D2 /* Model */,
-				8DCCE3BA1DCCC03E0077B12C /* Network */,
 				8DEC48AA1DAD116E000B214D /* Supporting-Files */,
 			);
 			path = Tests;
@@ -422,9 +422,9 @@
 				8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */,
 				8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */,
 				8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */,
-				8DCCE3BC1DCCC06A0077B12C /* EventRequestTest.swift in Sources */,
+				8DCCE3C41DCCDE1A0077B12C /* EventRequestTest.swift in Sources */,
 				8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */,
-				8DCCE3BE1DCCDC0E0077B12C /* TripSearchRequestTest.swift in Sources */,
+				8DCCE3C51DCCDE1E0077B12C /* TripSearchRequestTest.swift in Sources */,
 				8DB4DD121DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift in Sources */,
 				8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */,
 			);
