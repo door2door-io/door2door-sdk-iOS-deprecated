@@ -66,10 +66,8 @@ import Foundation
             EventCollectionKit.sharedInstance.networkManager.send(event: event)
         }
         else {
-        
-            print("[!]Initialization Error. You need to register the <EventCollectionKit> before sending events. \n" +
-                    "Use <public class func register(applicationToken: String, applicationName: String, applicationVersion: String?)>" +
-                    " to register the SDK and start collecting data.")
+
+            assertionFailure(ErrorMessages.registrationErrorDescription())
         }
     }
 }
