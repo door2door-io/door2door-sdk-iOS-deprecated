@@ -17,9 +17,7 @@ class EventTest: XCTestCase {
         let client = Client(deviceID: "Device ID", plattform: "iOS", application: "Test Application", version: "1.0")
         let person = Person(client: client)
         let event = Event(stage: .create, actor: person, eventType: .tripSearch)
-        
-        let mapedStageString = event.stageString(stage: .create)
-        
-        XCTAssertTrue(mapedStageString == "Create")
+                
+        XCTAssertTrue(event.stage.stringRepresentation() == "Create")
     }
 }

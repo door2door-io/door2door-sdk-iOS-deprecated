@@ -13,15 +13,15 @@ extension TripEvent {
     // ------------------------------------------------------------------------------------------
     // MARK: Convenience Initializer
     // ------------------------------------------------------------------------------------------
-    public class func tripSearchEvent(originLatitude: Float,
-                                      originLongitude: Float,
+    public class func tripSearchEvent(originLatitude: Double,
+                                      originLongitude: Double,
                                       originName: String?,
                                       originStreet: String?,
                                       originCity: String?,
                                       originPostalCode: String?,
                                       originCountry: String?,
-                                      destinationLatitude: Float,
-                                      destinationLongitude: Float,
+                                      destinationLatitude: Double,
+                                      destinationLongitude: Double,
                                       destinationName: String?,
                                       destinationStreet: String?,
                                       destinationCity: String?,

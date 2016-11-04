@@ -12,6 +12,14 @@ import Foundation
 public enum Stage {
     
     case create
+    
+    func stringRepresentation() -> String {
+        
+        switch self {
+            case .create:
+                return "Create"
+        }
+    }
 }
 
 public enum EventType {
@@ -46,20 +54,8 @@ public class Event: NSObject {
     // ------------------------------------------------------------------------------------------
     // MARK: Object to JSON Dict Mapping
     // ------------------------------------------------------------------------------------------
-    public func jsonRepresentation() -> Dictionary<String, Any>? {
+    public func jsonRepresentation() -> Dictionary<String, Any> {
     
         fatalError("Subclass must Override.")
-    }
-    
-    
-    // ------------------------------------------------------------------------------------------
-    // MARK: Helper
-    // ------------------------------------------------------------------------------------------
-    public func stageString(stage: Stage) -> String {
-    
-        switch stage {
-            case .create:
-                return "Create"
-        }
     }
 }

@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                                     applicationName: "Ally App",
                                     applicationVersion: "1.0.0")
         
-        EventCollectionKit.enableLogging(logginEnabled: true)
+        EventCollectionKit.enableLogging(loggingEnabled: true)
     }
     
     
