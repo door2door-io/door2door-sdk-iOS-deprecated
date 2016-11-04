@@ -28,7 +28,7 @@ protocol EventCollectionKitProtocol {
         - Parameter logginEnabled:  A boolean value to determine if logging is enabled or not. To enable logging set
                                     the value to **true**.
      */
-    static func enableLogging(logginEnabled: Bool)
+    static func enableLogging(loggingEnabled: Bool)
     
     
     /**

@@ -38,11 +38,11 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Object to JSON Dict Mapping
     // ------------------------------------------------------------------------------------------
-    public override func jsonRepresentation() -> Dictionary<String, Any>? {
+    public override func jsonRepresentation() -> Dictionary<String, Any> {
         
         var jsonDictionary = [String: Any]()
         
-        jsonDictionary["stage"] = self.stageString(stage: self.stage)
+        jsonDictionary["stage"] = self.stage.stringRepresentation()
         jsonDictionary["timestamp"] = self.timeStamp
         jsonDictionary["actor"] = self.actor.jsonRepresentation()
         jsonDictionary["trip"] = self.trip.jsonRepresentation()

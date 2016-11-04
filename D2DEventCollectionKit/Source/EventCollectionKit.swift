@@ -16,20 +16,14 @@ import Foundation
     // MARK: Private Properties
     // ------------------------------------------------------------------------------------------
 
-    public private(set) var configuration: EventCollectionKitConfiguration?
+    internal private(set) var configuration: EventCollectionKitConfiguration?
     
     private let networkManager = NetworkManager()
     
-    
     // ------------------------------------------------------------------------------------------
-    // MARK: Initialization
+    // MARK: Singleton
     // ------------------------------------------------------------------------------------------
-    public static let sharedInstance: EventCollectionKit = {
-        
-        let sharedInstance = EventCollectionKit()
-        
-        return sharedInstance
-    }()
+    internal static let sharedInstance = EventCollectionKit()
     
     
     // ------------------------------------------------------------------------------------------
@@ -47,11 +41,11 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Logging
     // ------------------------------------------------------------------------------------------
-    public class func enableLogging(logginEnabled: Bool) {
+    public class func enableLogging(loggingEnabled: Bool) {
     
         if let configuration = EventCollectionKit.sharedInstance.configuration {
            
-            configuration.loggingEnabled = logginEnabled
+            configuration.loggingEnabled = loggingEnabled
         }
     }
     
@@ -61,7 +55,7 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     public class func send(event: Event) {
         
-        if let _ = EventCollectionKit.sharedInstance.configuration {
+        if EventCollectionKit.isRegistered() {
         
             EventCollectionKit.sharedInstance.networkManager.send(event: event)
         }
@@ -69,5 +63,19 @@ import Foundation
 
             assertionFailure(ErrorMessages.registrationErrorDescription())
         }
+    }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Helper
+    // ------------------------------------------------------------------------------------------
+    private class func isRegistered () -> Bool {
+    
+        if let _ = EventCollectionKit.sharedInstance.configuration {
+        
+            return true
+        }
+        
+        return false
     }
 }
