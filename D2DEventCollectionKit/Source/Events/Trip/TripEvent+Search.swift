@@ -13,13 +13,16 @@ extension TripEvent {
     // ------------------------------------------------------------------------------------------
     // MARK: Convenience Initializer
     // ------------------------------------------------------------------------------------------
-    public class func tripSearchEvent(originLatitude: Double,
+    public class func tripSearchEvent(modeOfTransportations: [ModeOfTransportations],
+                                      departureTime: Date?,
+                                      originLatitude: Double,
                                       originLongitude: Double,
                                       originName: String?,
                                       originStreet: String?,
                                       originCity: String?,
                                       originPostalCode: String?,
                                       originCountry: String?,
+                                      arrivalTime:Date?,
                                       destinationLatitude: Double,
                                       destinationLongitude: Double,
                                       destinationName: String?,
@@ -29,24 +32,28 @@ extension TripEvent {
                                       destinationCountry: String?) -> TripEvent {
         
         let origin = Place(latitude: originLatitude,
-                           longitude: originLongitude,
-                           name: originName,
-                           street: originStreet,
-                           city: originCity,
-                           postalCode: originPostalCode,
-                           country: originCountry)
+                              longitude: originLongitude,
+                              name: originName,
+                              street: originStreet,
+                              city: originCity,
+                              postalCode: originPostalCode,
+                              country: originCountry)
+        
+        let departure = PlaceAtTime(place: origin, timestamp: departureTime?.ISO8601TimeString())
         
         let destination = Place(latitude: destinationLatitude,
-                                longitude: destinationLongitude,
-                                name: destinationName,
-                                street: destinationStreet,
-                                city: destinationCity,
-                                postalCode: destinationPostalCode,
-                                country: destinationCountry)
+                            longitude: destinationLongitude,
+                            name: destinationName,
+                            street: destinationStreet,
+                            city: destinationCity,
+                            postalCode: destinationPostalCode,
+                            country: destinationCountry)
         
-        let trip = Trip(origin: origin, destination: destination)
+        let arrival = PlaceAtTime(place: destination, timestamp: arrivalTime?.ISO8601TimeString())
         
-        let tripSearchEvent = TripEvent(stage: .create, trip: trip, eventType: .tripSearch)
+        let trip = Trip(departure: departure, arrival: arrival, modeOfTransportations: modeOfTransportations)
+        
+        let tripSearchEvent = TripEvent(stage: .search, trip: trip, eventType: .tripSearch)
         
         return tripSearchEvent
     }
