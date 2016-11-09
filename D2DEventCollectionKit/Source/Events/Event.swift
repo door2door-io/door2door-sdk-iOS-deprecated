@@ -11,13 +11,31 @@ import Foundation
 
 public enum Stage {
     
-    case create
+    case search
+    case interest
+    case book
+    case begin
+    case pay
+    case end
+    case cancel
     
     func stringRepresentation() -> String {
         
         switch self {
-            case .create:
-                return "Create"
+        case .search:
+            return "search"
+        case .interest:
+            return "interest"
+        case .book:
+            return "book"
+        case .begin:
+            return "begin"
+        case .pay:
+            return "pay"
+        case .end:
+            return "end"
+        case .cancel:
+            return "cancel"
         }
     }
 }
