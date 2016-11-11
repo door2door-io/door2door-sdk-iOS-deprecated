@@ -16,6 +16,12 @@
 		8D0AF6321DC0BF7F0002DECD /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF6311DC0BF7F0002DECD /* Client.swift */; };
 		8D0AF6341DC0C0590002DECD /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF6331DC0C0590002DECD /* Trip.swift */; };
 		8D0AF6361DC0CC920002DECD /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF6351DC0CC920002DECD /* Place.swift */; };
+		8D2676011DD60F1C00A9C930 /* TripEvent+Begin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */; };
+		8D2676051DD60FC900A9C930 /* TripEvent+Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */; };
+		8D2676071DD6126700A9C930 /* TripEvent+Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676061DD6126700A9C930 /* TripEvent+Book.swift */; };
+		8D2676091DD6128900A9C930 /* TripEvent+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */; };
+		8D26760B1DD6129F00A9C930 /* TripEvent+End.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */; };
+		8D26760D1DD612B300A9C930 /* TripEvent+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */; };
 		8D3193C71DD389150078BC27 /* PlaceAtTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3193C61DD389150078BC27 /* PlaceAtTime.swift */; };
 		8D3193C91DD38AFC0078BC27 /* PlaceAtTimeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3193C81DD38AFC0078BC27 /* PlaceAtTimeTest.swift */; };
 		8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */; };
@@ -59,6 +65,12 @@
 		8D0AF6311DC0BF7F0002DECD /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		8D0AF6331DC0C0590002DECD /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		8D0AF6351DC0CC920002DECD /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+Begin.swift"; sourceTree = "<group>"; };
+		8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+Interest.swift"; sourceTree = "<group>"; };
+		8D2676061DD6126700A9C930 /* TripEvent+Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+Book.swift"; sourceTree = "<group>"; };
+		8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+Pay.swift"; sourceTree = "<group>"; };
+		8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+End.swift"; sourceTree = "<group>"; };
+		8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+Cancel.swift"; sourceTree = "<group>"; };
 		8D3193C61DD389150078BC27 /* PlaceAtTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAtTime.swift; sourceTree = "<group>"; };
 		8D3193C81DD38AFC0078BC27 /* PlaceAtTimeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAtTimeTest.swift; sourceTree = "<group>"; };
 		8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKit.swift; sourceTree = "<group>"; };
@@ -263,8 +275,14 @@
 		8DF3687E1DCA37350088A730 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
-				8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */,
 				8DF368801DCA37350088A730 /* TripEvent.swift */,
+				8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */,
+				8D2676061DD6126700A9C930 /* TripEvent+Book.swift */,
+				8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */,
+				8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */,
+				8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */,
+				8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */,
+				8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */,
 			);
 			path = Trip;
 			sourceTree = "<group>";
@@ -403,6 +421,7 @@
 				8DF368831DCA39030088A730 /* TripEvent+Search.swift in Sources */,
 				8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */,
 				8D0AF6341DC0C0590002DECD /* Trip.swift in Sources */,
+				8D26760D1DD612B300A9C930 /* TripEvent+Cancel.swift in Sources */,
 				8D0AF6361DC0CC920002DECD /* Place.swift in Sources */,
 				8D0AF6301DC0BEF30002DECD /* Person.swift in Sources */,
 				8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */,
@@ -414,10 +433,15 @@
 				8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */,
 				8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */,
 				8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */,
+				8D2676091DD6128900A9C930 /* TripEvent+Pay.swift in Sources */,
 				8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */,
 				8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */,
+				8D2676011DD60F1C00A9C930 /* TripEvent+Begin.swift in Sources */,
+				8D2676051DD60FC900A9C930 /* TripEvent+Interest.swift in Sources */,
 				8DF3687D1DCA33C20088A730 /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
+				8D2676071DD6126700A9C930 /* TripEvent+Book.swift in Sources */,
+				8D26760B1DD6129F00A9C930 /* TripEvent+End.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
