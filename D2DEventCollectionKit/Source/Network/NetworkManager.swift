@@ -30,7 +30,7 @@ class NetworkManager {
 
             Logger.printData(data: jsonData)
             
-            let eventRequest = self.requestForEventType(eventType: event.eventType, jsonPayload: jsonData)
+            let eventRequest = self.requestForEventType(stage: event.stage, jsonPayload: jsonData)
             
             let eventTask = self.dataSession.dataTask(with: eventRequest as URLRequest) { data, response, error in
                 
@@ -59,11 +59,13 @@ class NetworkManager {
     // ------------------------------------------------------------------------------------------
     // MARK: URLRequest Object by EventType
     // ------------------------------------------------------------------------------------------
-    private func requestForEventType(eventType: EventType, jsonPayload: Data) -> EventRequest {
+    private func requestForEventType(stage: Stage, jsonPayload: Data) -> EventRequest {
     
-        switch eventType {
-            case .tripSearch:
-                return EventRequest.tripSearchRequest(jsonPayload: jsonPayload)
-        }
+        return EventRequest.tripSearchRequest(jsonPayload: jsonPayload)
+        
+//        switch stage {
+//            case .search:
+//                return EventRequest.tripSearchRequest(jsonPayload: jsonPayload)
+//        }
     }
 }

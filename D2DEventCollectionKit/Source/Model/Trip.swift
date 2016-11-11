@@ -70,4 +70,50 @@ public struct Trip {
         
         return jsonDictionary
     }
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Trip Creation
+    // ------------------------------------------------------------------------------------------
+    public static func trip(modeOfTransportations: [ModeOfTransportations],
+                            departureTime: Date?,
+                            originLatitude: Double,
+                            originLongitude: Double,
+                            originName: String?,
+                            originStreet: String?,
+                            originCity: String?,
+                            originPostalCode: String?,
+                            originCountry: String?,
+                            arrivalTime:Date?,
+                            destinationLatitude: Double,
+                            destinationLongitude: Double,
+                            destinationName: String?,
+                            destinationStreet: String?,
+                            destinationCity: String?,
+                            destinationPostalCode: String?,
+                            destinationCountry: String?) -> Trip {
+        
+        let origin = Place(latitude: originLatitude,
+                           longitude: originLongitude,
+                           name: originName,
+                           street: originStreet,
+                           city: originCity,
+                           postalCode: originPostalCode,
+                           country: originCountry)
+        
+        let departure = PlaceAtTime(place: origin, timestamp: departureTime?.ISO8601TimeString())
+        
+        let destination = Place(latitude: destinationLatitude,
+                                longitude: destinationLongitude,
+                                name: destinationName,
+                                street: destinationStreet,
+                                city: destinationCity,
+                                postalCode: destinationPostalCode,
+                                country: destinationCountry)
+        
+        let arrival = PlaceAtTime(place: destination, timestamp: arrivalTime?.ISO8601TimeString())
+        
+        let trip = Trip(departure: departure, arrival: arrival, modeOfTransportations: modeOfTransportations)
+        
+        return trip
+    }
 }

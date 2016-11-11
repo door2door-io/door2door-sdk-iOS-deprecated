@@ -30,31 +30,25 @@ extension TripEvent {
                                       destinationCity: String?,
                                       destinationPostalCode: String?,
                                       destinationCountry: String?) -> TripEvent {
+
+        let trip = Trip.trip(modeOfTransportations: modeOfTransportations,
+                                     departureTime: departureTime,
+                                     originLatitude: originLatitude,
+                                     originLongitude: originLongitude,
+                                     originName: originName,
+                                     originStreet: originStreet,
+                                     originCity: originCity,
+                                     originPostalCode: originPostalCode,
+                                     originCountry: originCountry,
+                                     arrivalTime:arrivalTime,
+                                     destinationLatitude: destinationLatitude,
+                                     destinationLongitude: destinationLongitude,
+                                     destinationName: destinationName,
+                                     destinationStreet: destinationStreet,
+                                     destinationCity: destinationCity,
+                                     destinationPostalCode: destinationPostalCode,
+                                     destinationCountry: destinationCountry)
         
-        let origin = Place(latitude: originLatitude,
-                              longitude: originLongitude,
-                              name: originName,
-                              street: originStreet,
-                              city: originCity,
-                              postalCode: originPostalCode,
-                              country: originCountry)
-        
-        let departure = PlaceAtTime(place: origin, timestamp: departureTime?.ISO8601TimeString())
-        
-        let destination = Place(latitude: destinationLatitude,
-                            longitude: destinationLongitude,
-                            name: destinationName,
-                            street: destinationStreet,
-                            city: destinationCity,
-                            postalCode: destinationPostalCode,
-                            country: destinationCountry)
-        
-        let arrival = PlaceAtTime(place: destination, timestamp: arrivalTime?.ISO8601TimeString())
-        
-        let trip = Trip(departure: departure, arrival: arrival, modeOfTransportations: modeOfTransportations)
-        
-        let tripSearchEvent = TripEvent(stage: .search, trip: trip, eventType: .tripSearch)
-        
-        return tripSearchEvent
+        return TripEvent(stage: .search, trip: trip)
     }
 }

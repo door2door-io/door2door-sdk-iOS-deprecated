@@ -19,7 +19,7 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    public init(stage: Stage, trip: Trip, eventType: EventType) {
+    public init(stage: Stage, trip: Trip) {
         
         self.trip = trip
     
@@ -32,7 +32,7 @@ import Foundation
         
         let actor = Person(client: client)
         
-        super.init(stage: stage, actor: actor, eventType: eventType)
+        super.init(stage: stage, actor: actor)
     }
     
     // ------------------------------------------------------------------------------------------
@@ -49,5 +49,4 @@ import Foundation
 
         return jsonDictionary
     }
-    
  }
