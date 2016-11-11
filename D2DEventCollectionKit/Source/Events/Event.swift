@@ -22,20 +22,20 @@ public enum Stage {
     func stringRepresentation() -> String {
         
         switch self {
-        case .search:
-            return "search"
-        case .interest:
-            return "interest"
-        case .book:
-            return "book"
-        case .begin:
-            return "begin"
-        case .pay:
-            return "pay"
-        case .end:
-            return "end"
-        case .cancel:
-            return "cancel"
+            case .search:
+                return "search"
+            case .interest:
+                return "interest"
+            case .book:
+                return "book"
+            case .begin:
+                return "begin"
+            case .pay:
+                return "pay"
+            case .end:
+                return "end"
+            case .cancel:
+                return "cancel"
         }
     }
 }
