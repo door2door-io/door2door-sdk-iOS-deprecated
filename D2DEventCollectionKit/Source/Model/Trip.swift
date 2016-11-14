@@ -27,7 +27,7 @@ public enum ModesOfTransportation {
         case .train:
             return "train"
         case .walk:
-                return "walk"
+            return "walk"
         case .publicTransport:
             return "public_transport"
         case .carSharing:

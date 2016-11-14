@@ -33,6 +33,8 @@
 		8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD141DCB9AF6004194F7 /* TripTest.swift */; };
 		8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA82BD1DBF8E7F003017CB /* Event.swift */; };
 		8DBB11B91DD9FD5100830FD0 /* TripEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */; };
+		8DBB11BD1DDA1AA200830FD0 /* ModesOfTransportationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB11BC1DDA1AA200830FD0 /* ModesOfTransportationTest.swift */; };
+		8DBB11BF1DDA1D1800830FD0 /* ActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB11BE1DDA1D1800830FD0 /* ActionTest.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */; };
 		8DCCE3C41DCCDE1A0077B12C /* EventRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */; };
@@ -82,6 +84,8 @@
 		8DB4DD141DCB9AF6004194F7 /* TripTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTest.swift; sourceTree = "<group>"; };
 		8DBA82BD1DBF8E7F003017CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TripEventTest.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8DBB11BC1DDA1AA200830FD0 /* ModesOfTransportationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModesOfTransportationTest.swift; sourceTree = "<group>"; };
+		8DBB11BE1DDA1D1800830FD0 /* ActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTest.swift; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
@@ -120,10 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */,
+				8DBB11BC1DDA1AA200830FD0 /* ModesOfTransportationTest.swift */,
 				8D06B4D01DCB94EB008130D2 /* PersonTest.swift */,
 				8D3193C81DD38AFC0078BC27 /* PlaceAtTimeTest.swift */,
 				8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */,
 				8DB4DD141DCB9AF6004194F7 /* TripTest.swift */,
+				8DBB11BE1DDA1D1800830FD0 /* ActionTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */,
+				8DBB11BF1DDA1D1800830FD0 /* ActionTest.swift in Sources */,
 				8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */,
 				8D3193C91DD38AFC0078BC27 /* PlaceAtTimeTest.swift in Sources */,
 				8DBB11B91DD9FD5100830FD0 /* TripEventTest.swift in Sources */,
@@ -459,6 +466,7 @@
 				8DCCE3C51DCCDE1E0077B12C /* TripSearchRequestTest.swift in Sources */,
 				8DB4DD121DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift in Sources */,
 				8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */,
+				8DBB11BD1DDA1AA200830FD0 /* ModesOfTransportationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
