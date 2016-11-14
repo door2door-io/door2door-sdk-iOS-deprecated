@@ -102,4 +102,12 @@ class TripEventTest: XCTestCase {
         
         XCTAssertTrue(event.action.stringRepresentation() == "cancel")
     }
+    
+    
+    func testValidateJSONOnlyWithRequiredParameterSet() {
+        
+        let event = TripEvent(action: .cancel, trip: self.trip)
+
+        XCTAssertTrue(event.jsonRepresentation().count == 4)
+    }
 }
