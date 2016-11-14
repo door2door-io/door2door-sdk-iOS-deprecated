@@ -9,12 +9,45 @@
 import Foundation
 
 
+public enum Stage {
+    
+    case search
+    case interest
+    case book
+    case begin
+    case pay
+    case end
+    case cancel
+    
+    func stringRepresentation() -> String {
+        
+        switch self {
+            case .search:
+                return "search"
+            case .interest:
+                return "interest"
+            case .book:
+                return "book"
+            case .begin:
+                return "begin"
+            case .pay:
+                return "pay"
+            case .end:
+                return "end"
+            case .cancel:
+                return "cancel"
+        }
+    }
+}
+
+
 @objc (D2DTripEvent) public class TripEvent: Event {
     
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
     public fileprivate(set) var trip: Trip
+    public fileprivate(set) var stage: Stage
     
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
@@ -22,17 +55,18 @@ import Foundation
     public init(stage: Stage, trip: Trip) {
         
         self.trip = trip
+        self.stage = stage
     
         let configuration = EventCollectionKit.sharedInstance.configuration
         
         let client = Client(deviceID: Session.deviceID(),
                             plattform: Session.plattform(),
-                            application:(configuration?.applicationName)!,
+                            application:configuration?.applicationName ?? "Application name not set.",
                             version: configuration?.applicationVersion)
         
         let actor = Person(client: client)
         
-        super.init(stage: stage, actor: actor)
+        super.init(actor: actor)
     }
     
     // ------------------------------------------------------------------------------------------

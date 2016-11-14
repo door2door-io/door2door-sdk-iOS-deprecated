@@ -32,9 +32,9 @@
 		8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */; };
 		8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD141DCB9AF6004194F7 /* TripTest.swift */; };
 		8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA82BD1DBF8E7F003017CB /* Event.swift */; };
+		8DBB11B91DD9FD5100830FD0 /* TripEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */; };
-		8DCCE3B81DCCA4FE0077B12C /* EventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */; };
 		8DCCE3C41DCCDE1A0077B12C /* EventRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */; };
 		8DCCE3C51DCCDE1E0077B12C /* TripSearchRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3C11DCCDE140077B12C /* TripSearchRequestTest.swift */; };
 		8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */; };
@@ -81,10 +81,10 @@
 		8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
 		8DB4DD141DCB9AF6004194F7 /* TripTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTest.swift; sourceTree = "<group>"; };
 		8DBA82BD1DBF8E7F003017CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripEventTest.swift; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
-		8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTest.swift; sourceTree = "<group>"; };
 		8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequestTest.swift; sourceTree = "<group>"; };
 		8DCCE3C11DCCDE140077B12C /* TripSearchRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSearchRequestTest.swift; sourceTree = "<group>"; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		8DCCE3B61DCCA4EC0077B12C /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */,
+				8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -449,10 +449,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DCCE3B81DCCA4FE0077B12C /* EventTest.swift in Sources */,
 				8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */,
 				8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */,
 				8D3193C91DD38AFC0078BC27 /* PlaceAtTimeTest.swift in Sources */,
+				8DBB11B91DD9FD5100830FD0 /* TripEventTest.swift in Sources */,
 				8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */,
 				8DCCE3C41DCCDE1A0077B12C /* EventRequestTest.swift in Sources */,
 				8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */,

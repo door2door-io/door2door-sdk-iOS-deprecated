@@ -9,53 +9,19 @@
 import Foundation
 
 
-public enum Stage {
-    
-    case search
-    case interest
-    case book
-    case begin
-    case pay
-    case end
-    case cancel
-    
-    func stringRepresentation() -> String {
-        
-        switch self {
-            case .search:
-                return "search"
-            case .interest:
-                return "interest"
-            case .book:
-                return "book"
-            case .begin:
-                return "begin"
-            case .pay:
-                return "pay"
-            case .end:
-                return "end"
-            case .cancel:
-                return "cancel"
-        }
-    }
-}
-
-
 public class Event: NSObject {
 
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
-    public fileprivate(set) var stage: Stage
     public fileprivate(set) var timeStamp: String
     public fileprivate(set) var actor: Person
  
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    public init(stage: Stage, actor: Person) {
+    public init(actor: Person) {
     
-        self.stage = stage
         self.actor = actor
         
         self.timeStamp = Date.ISO8601TimeStampString()
