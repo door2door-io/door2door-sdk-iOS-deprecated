@@ -44,7 +44,7 @@ class TripEventTest: XCTestCase {
         
         let arrival = PlaceAtTime(place: destination, timestamp: nil)
         
-        self.trip = Trip(departure: departure, arrival: arrival, modeOfTransportations: [ModeOfTransportations.taxi])
+        self.trip = Trip(departure: departure, arrival: arrival, modesOfTransportation: [ModesOfTransportation.taxi])
     }
 
     

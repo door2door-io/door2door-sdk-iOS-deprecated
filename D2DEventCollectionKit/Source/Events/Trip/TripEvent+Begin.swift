@@ -13,7 +13,7 @@ extension TripEvent {
     // ------------------------------------------------------------------------------------------
     // MARK: Convenience Initializer
     // ------------------------------------------------------------------------------------------
-    public class func tripBeginEvent(modeOfTransportations: [ModeOfTransportations],
+    public class func tripBeginEvent(modesOfTransportation: [ModesOfTransportation],
                                      departureTime: Date?,
                                      originLatitude: Double,
                                      originLongitude: Double,
@@ -31,7 +31,7 @@ extension TripEvent {
                                      destinationPostalCode: String?,
                                      destinationCountry: String?) -> TripEvent {
         
-        let trip = Trip.trip(modeOfTransportations: modeOfTransportations,
+        let trip = Trip.trip(modesOfTransportation: modesOfTransportation,
                              departureTime: departureTime,
                              originLatitude: originLatitude,
                              originLongitude: originLongitude,
