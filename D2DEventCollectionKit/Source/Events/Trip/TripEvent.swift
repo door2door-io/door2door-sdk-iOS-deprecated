@@ -47,7 +47,7 @@ public enum Action {
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
     public fileprivate(set) var trip: Trip
-    public fileprivate(set) var action: action
+    public fileprivate(set) var action: Action
     
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
