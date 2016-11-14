@@ -79,5 +79,8 @@ class TripTest: XCTestCase {
         
         XCTAssertTrue(tripJSONRepresentation.count == 3)
     }
+    
+    
+    
 }
 
