@@ -69,7 +69,7 @@ class TripTest: XCTestCase {
         XCTAssertTrue(arrivaljsonRepresentation.count == 2)
         
         
-        let trip = Trip(departure: departure, arrival: arrival, modeOfTransportations: [ModeOfTransportations.taxi])
+        let trip = Trip(departure: departure, arrival: arrival, modesOfTransportation: [ModesOfTransportation.taxi])
         
         guard let tripJSONRepresentation = trip.jsonRepresentation() else {
             

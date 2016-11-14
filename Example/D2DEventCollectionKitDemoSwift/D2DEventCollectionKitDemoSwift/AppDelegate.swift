@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     fileprivate func testSearchEvent() {
     
-        let tripSearchEvent  = TripEvent.tripSearchEvent(modeOfTransportations:[.train, .taxi],
+        let tripSearchEvent  = TripEvent.tripSearchEvent(modesOfTransportation:[.train, .taxi],
                                                          departureTime: Date(),
                                                          originLatitude: 52.5230554,
                                                          originLongitude: 13.4122575,

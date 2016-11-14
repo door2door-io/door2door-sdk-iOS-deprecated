@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ModeOfTransportations {
+public enum ModesOfTransportation {
     
     case train
     case walk
@@ -54,7 +54,7 @@ public struct Trip {
     // ------------------------------------------------------------------------------------------
     public fileprivate(set) var departure: PlaceAtTime
     public fileprivate(set) var arrival: PlaceAtTime
-    public fileprivate(set) var modeOfTransportations: [ModeOfTransportations]
+    public fileprivate(set) var modesOfTransportation: [ModesOfTransportation]
     
     // ------------------------------------------------------------------------------------------
     // MARK: JSON Representation
@@ -63,7 +63,7 @@ public struct Trip {
         
         var jsonDictionary = [String: Any]()
         
-        jsonDictionary["modeOfTransportations"] = self.modeOfTransportations.map {$0.stringRepresentation()}
+        jsonDictionary["modesOfTransportation"] = self.modesOfTransportation.map {$0.stringRepresentation()}
         
         jsonDictionary["departure"] = self.departure.jsonRepresentation()
         jsonDictionary["arrival"] = self.arrival.jsonRepresentation()
@@ -74,7 +74,7 @@ public struct Trip {
     // ------------------------------------------------------------------------------------------
     // MARK: Trip Creation
     // ------------------------------------------------------------------------------------------
-    public static func trip(modeOfTransportations: [ModeOfTransportations],
+    public static func trip(modesOfTransportation: [ModesOfTransportation],
                             departureTime: Date?,
                             originLatitude: Double,
                             originLongitude: Double,
@@ -112,7 +112,7 @@ public struct Trip {
         
         let arrival = PlaceAtTime(place: destination, timestamp: arrivalTime?.ISO8601TimeString())
         
-        let trip = Trip(departure: departure, arrival: arrival, modeOfTransportations: modeOfTransportations)
+        let trip = Trip(departure: departure, arrival: arrival, modesOfTransportation: modesOfTransportation)
         
         return trip
     }
