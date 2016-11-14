@@ -50,56 +50,56 @@ class TripEventTest: XCTestCase {
     
     func testMapSearchActionEnumToStringValue() {
         
-        let event = TripEvent(stage: .search, trip: self.trip)
+        let event = TripEvent(action: .search, trip: self.trip)
         
-        XCTAssertTrue(event.stage.stringRepresentation() == "search")
+        XCTAssertTrue(event.action.stringRepresentation() == "search")
     }
     
     
     func testMapInterestActionEnumToStringValue() {
         
-        let event = TripEvent(stage: .interest, trip: self.trip)
+        let event = TripEvent(action: .interest, trip: self.trip)
         
-        XCTAssertTrue(event.stage.stringRepresentation() == "interest")
+        XCTAssertTrue(event.action.stringRepresentation() == "interest")
     }
     
     
     func testMapBookActionEnumToStringValue() {
         
-        let event = TripEvent(stage: .book, trip: self.trip)
+        let event = TripEvent(action: .book, trip: self.trip)
         
-        XCTAssertTrue(event.stage.stringRepresentation() == "book")
+        XCTAssertTrue(event.action.stringRepresentation() == "book")
     }
     
     
     func testMapBeginActionEnumToStringValue() {
         
-        let event = TripEvent(stage: .begin, trip: self.trip)
+        let event = TripEvent(action: .begin, trip: self.trip)
         
-        XCTAssertTrue(event.stage.stringRepresentation() == "begin")
+        XCTAssertTrue(event.action.stringRepresentation() == "begin")
     }
     
     
     func testMapPayActionEnumToStringValue() {
         
-        let event = TripEvent(stage: .pay, trip: self.trip)
+        let event = TripEvent(action: .pay, trip: self.trip)
         
-        XCTAssertTrue(event.stage.stringRepresentation() == "pay")
+        XCTAssertTrue(event.action.stringRepresentation() == "pay")
     }
     
     
     func testMapEndActionEnumToStringValue() {
         
-        let event = TripEvent(stage: .end, trip: self.trip)
+        let event = TripEvent(action: .end, trip: self.trip)
 
-        XCTAssertTrue(event.stage.stringRepresentation() == "end")
+        XCTAssertTrue(event.action.stringRepresentation() == "end")
     }
     
     
     func testMapCancelActionEnumToStringValue() {
         
-        let event = TripEvent(stage: .cancel, trip: self.trip)
+        let event = TripEvent(action: .cancel, trip: self.trip)
         
-        XCTAssertTrue(event.stage.stringRepresentation() == "cancel")
+        XCTAssertTrue(event.action.stringRepresentation() == "cancel")
     }
 }

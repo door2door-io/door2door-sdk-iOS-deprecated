@@ -9,7 +9,7 @@
 import Foundation
 
 
-public enum Stage {
+public enum Action {
     
     case search
     case interest
@@ -47,15 +47,15 @@ public enum Stage {
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
     public fileprivate(set) var trip: Trip
-    public fileprivate(set) var stage: Stage
+    public fileprivate(set) var action: action
     
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    public init(stage: Stage, trip: Trip) {
+    public init(action: Action, trip: Trip) {
         
         self.trip = trip
-        self.stage = stage
+        self.action = action
     
         let configuration = EventCollectionKit.sharedInstance.configuration
         
@@ -76,7 +76,7 @@ public enum Stage {
         
         var jsonDictionary = [String: Any]()
         
-        jsonDictionary["stage"] = self.stage.stringRepresentation()
+        jsonDictionary["action"] = self.action.stringRepresentation()
         jsonDictionary["timestamp"] = self.timeStamp
         jsonDictionary["actor"] = self.actor.jsonRepresentation()
         jsonDictionary["trip"] = self.trip.jsonRepresentation()

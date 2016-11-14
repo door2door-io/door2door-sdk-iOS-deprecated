@@ -49,6 +49,6 @@ extension TripEvent {
                              destinationPostalCode: destinationPostalCode,
                              destinationCountry: destinationCountry)
         
-        return TripEvent(stage: .interest, trip: trip)
+        return TripEvent(action: .interest, trip: trip)
     }
 }
