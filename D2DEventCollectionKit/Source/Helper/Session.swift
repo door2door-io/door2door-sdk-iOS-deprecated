@@ -55,7 +55,7 @@ class Session {
     
     public class func plattform() -> String? {
         
-        return "iOS"
+        return "ios"
     }
     
 

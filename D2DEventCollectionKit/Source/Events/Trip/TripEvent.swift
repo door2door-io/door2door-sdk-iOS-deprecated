@@ -83,4 +83,24 @@ public enum Action {
 
         return jsonDictionary
     }
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // MARK: Helper
+    // ------------------------------------------------------------------------------------------
+    public class func map(modesOfTransportationsNumberRepresentation: [NSNumber]) -> [ModesOfTransportation] {
+        
+        let result:[ModesOfTransportation] = modesOfTransportationsNumberRepresentation.map {
+            
+            if let mode = ModesOfTransportation(rawValue: $0.intValue) {
+                
+                return mode
+            }
+            else {
+                return .other
+            }
+        }
+        
+        return result
+    }
  }

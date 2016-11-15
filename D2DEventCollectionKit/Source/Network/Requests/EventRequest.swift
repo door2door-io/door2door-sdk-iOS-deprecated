@@ -40,7 +40,7 @@ class EventRequest: NSMutableURLRequest {
     // ------------------------------------------------------------------------------------------
     public class func baseURLString() -> String {
     
-        return "https://events.d2di.net"
+        return "https://events-dev.d2di.net"
     }
     
     
