@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ModesOfTransportation {
+public enum ModesOfTransportation: Int {
     
     case train
     case walk
@@ -23,25 +23,24 @@ public enum ModesOfTransportation {
     func stringRepresentation() -> String {
         
         switch self {
-            
-        case .train:
-            return "train"
-        case .walk:
-            return "walk"
-        case .publicTransport:
-            return "public_transport"
-        case .carSharing:
-            return "car_sharing"
-        case .bikeSharing:
-            return "bike_sharing"
-        case .taxi:
-            return "taxi"
-        case .privateBike:
-            return "private_bike"
-        case .rideSharing:
-            return "ride_sharing"
-        case .other:
-            return "other"
+            case .train:
+                return "train"
+            case .walk:
+                return "walk"
+            case .publicTransport:
+                return "public_transport"
+            case .carSharing:
+                return "car_sharing"
+            case .bikeSharing:
+                return "bike_sharing"
+            case .taxi:
+                return "taxi"
+            case .privateBike:
+                return "private_bike"
+            case .rideSharing:
+                return "ride_sharing"
+            case .other:
+                return "other"
         }
     }
 }
@@ -63,8 +62,7 @@ public struct Trip {
         
         var jsonDictionary = [String: Any]()
         
-        jsonDictionary["modesOfTransportation"] = self.modesOfTransportation.map {$0.stringRepresentation()}
-        
+        jsonDictionary["modes_of_transportation"] = self.modesOfTransportation.map {$0.stringRepresentation()}
         jsonDictionary["departure"] = self.departure.jsonRepresentation()
         jsonDictionary["arrival"] = self.arrival.jsonRepresentation()
         

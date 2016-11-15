@@ -25,7 +25,7 @@ public struct PlaceAtTime {
         var jsonDictionary = [String: Any]()
         
         jsonDictionary["place"] = self.place.jsonRepresentation()
-        jsonDictionary["timestamp"] = self.timestamp ?? NSNull()
+        jsonDictionary["timestamp"] =  self.timestamp ?? NSNull()
         
         return jsonDictionary
     }
