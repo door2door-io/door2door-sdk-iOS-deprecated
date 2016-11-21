@@ -15,7 +15,6 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Private Properties
     // ------------------------------------------------------------------------------------------
-
     internal private(set) var configuration: EventCollectionKitConfiguration?
     
     private let networkManager = NetworkManager()
