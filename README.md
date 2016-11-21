@@ -14,13 +14,13 @@ A **dependency free** plug and play API wrapper to send event data to the Door2D
 
 ## 1. Technical Requirements
 
-The event collection API wrapper can be used with swift 3.x and higher as well as with Objective-C. We also made it usale with your most beloved dependecy manager. You have the choice. 
+The event collection API wrapper can be used with ``swift 3.x`` and higher as well as with ``Objective-C``. We also made it usale with your most beloved dependecy manager. You have the choice. 
 
- * Swift 3.x
- * Objective-C
- * Cocoapods
- * Carthage
- * Use the Xcode project directly in your project
+ * ``Swift 3.x``
+ * ``Objective-C``
+ * ``Cocoapods``
+ * ``Carthage``
+ * Use the ``Xcode project`` directly in your project
 
 
 ## 2. Guide
