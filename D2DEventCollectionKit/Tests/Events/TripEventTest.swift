@@ -13,12 +13,14 @@ import XCTest
 class TripEventTest: XCTestCase {
     
     var trip: Trip!
+    var modesOfTransportationAsNumbers: [NSNumber]!
 
     override func setUp() {
         
         super.setUp()
         
         self.setupTripModel()
+        self.setupTransportationOptionsAsNumbers()
     }
     
     
@@ -53,5 +55,29 @@ class TripEventTest: XCTestCase {
         let event = TripEvent(action: .cancel, trip: self.trip)
 
         XCTAssertTrue(event.jsonRepresentation().count == 4)
+    }
+    
+    
+    func setupTransportationOptionsAsNumbers() {
+    
+        //TODO: Add the rest of the values here. Swift is strange! 
+        self.modesOfTransportationAsNumbers = [NSNumber(value: 0), NSNumber(value: 1), NSNumber(value: 2), NSNumber(value: 3)]
+    }
+    
+    
+    func testObjectiveCModeOfTransportationEnumMapping() {
+    
+        let modesOfTransportationEnums =
+                TripEvent.map(modesOfTransportationsNumberRepresentation: self.modesOfTransportationAsNumbers)
+        
+        XCTAssertTrue(modesOfTransportationEnums[0] == ModesOfTransportation.train)
+        XCTAssertTrue(modesOfTransportationEnums[1] == ModesOfTransportation.walk)
+        XCTAssertTrue(modesOfTransportationEnums[2] == ModesOfTransportation.publicTransport)
+        XCTAssertTrue(modesOfTransportationEnums[3] == ModesOfTransportation.carSharing)
+//        XCTAssertTrue(modesOfTransportationEnums[4] == ModesOfTransportation.bikeSharing)
+//        XCTAssertTrue(modesOfTransportationEnums[5] == ModesOfTransportation.taxi)
+//        XCTAssertTrue(modesOfTransportationEnums[6] == ModesOfTransportation.privateBike)
+//        XCTAssertTrue(modesOfTransportationEnums[7] == ModesOfTransportation.rideSharing)
+//        XCTAssertTrue(modesOfTransportationEnums[8] == ModesOfTransportation.other)
     }
 }
