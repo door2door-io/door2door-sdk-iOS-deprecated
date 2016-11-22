@@ -40,19 +40,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                                     applicationName: "Ally App",
                                     applicationVersion: "1.0.0")
         
-        EventCollectionKit.enableLogging(loggingEnabled: true)
+        EventCollectionKit.enable(logging: true)
     }
     
     
     fileprivate func testSearchEvent() {
     
-        let tripSearchEvent  = TripEvent.tripSearchEvent(originLatitude: 52.5230554,
+        let tripSearchEvent  = TripEvent.tripSearchEvent(modesOfTransportation:[.train, .taxi],
+                                                         departureTime: Date(),
+                                                         originLatitude: 52.5230554,
                                                          originLongitude: 13.4122575,
                                                          originName: "Alexanderplatz",
                                                          originStreet: "Alexanderplatz",
                                                          originCity: "Berlin",
                                                          originPostalCode: "10119",
                                                          originCountry: "Germany",
+                                                         arrivalTime: nil,
                                                          destinationLatitude: 52.5300641,
                                                          destinationLongitude: 13.4008385,
                                                          destinationName: "Door2Door HQ",

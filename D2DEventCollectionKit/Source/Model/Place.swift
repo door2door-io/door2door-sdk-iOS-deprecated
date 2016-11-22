@@ -29,12 +29,12 @@ public struct Place {
         
         var jsonDictionary = [String: Any]()
         
-        jsonDictionary["latitude"] = "\(self.latitude)"
-        jsonDictionary["longitude"] = "\(self.longitude)"
+        jsonDictionary["latitude"] = NSNumber(value: self.latitude)
+        jsonDictionary["longitude"] = NSNumber(value: self.longitude)
         jsonDictionary["name"] = self.name ?? NSNull()
         jsonDictionary["street"] = self.street ?? NSNull()
         jsonDictionary["city"] = self.city ?? NSNull()
-        jsonDictionary["postalCode"] = self.postalCode ?? NSNull()
+        jsonDictionary["postal_code"] = self.postalCode ?? NSNull()
         jsonDictionary["country"] = self.country ?? NSNull()
     
         return jsonDictionary

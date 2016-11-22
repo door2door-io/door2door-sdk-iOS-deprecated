@@ -25,6 +25,6 @@ class EventRequestTest: XCTestCase {
             return
         }
         
-        XCTAssertTrue(url.absoluteURL.absoluteString == "https://events.d2di.net")
+        XCTAssertTrue(url.absoluteURL.absoluteString == "https://events-dev.d2di.net")
     }
 }
