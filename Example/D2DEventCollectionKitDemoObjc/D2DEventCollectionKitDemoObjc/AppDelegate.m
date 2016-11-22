@@ -44,28 +44,33 @@
                                         applicationName:@"Ally App"
                                      applicationVersion:@"1.0.0"];
     
-    [D2DEventCollectionKit enableLoggingWithLogginEnabled:YES];
+    [D2DEventCollectionKit enableWithLogging:YES];
 }
 
 
 - (void)testSearchEvent {
     
-   D2DTripEvent *tripEvent = [D2DTripEvent tripSearchEventWithOriginLatitude:52.5230554
-                                                             originLongitude:13.4122575
-                                                                  originName:@"Alexanderplatz"
-                                                                originStreet:@"Alexanderplatz"
-                                                                  originCity:@"Berlin"
-                                                            originPostalCode:@"10178"
-                                                               originCountry:@"Germany"
-                                                         destinationLatitude:52.5300641
-                                                        destinationLongitude:13.4008385
-                                                             destinationName:@"Door2Door HQ"
-                                                           destinationStreet:@"Torstrasse 109"
-                                                             destinationCity:@"Berlin"
-                                                       destinationPostalCode:@"10119"
-                                                          destinationCountry:@"Germany"];
+    NSArray *modesOftransportations = @[@(ModesOfTransportationTaxi), @(ModesOfTransportationWalk)];
     
-    [D2DEventCollectionKit sendWithEvent:tripEvent];
+    D2DTripEvent *tripEvent = [D2DTripEvent tripBeginEventWithModesOfTransportation:modesOftransportations
+                                                                      departureTime:[NSDate date]
+                                                                     originLatitude:52.5230554
+                                                                    originLongitude:13.4122575
+                                                                         originName:@"Alexanderplatz"
+                                                                       originStreet:@"Alexanderplatz"
+                                                                         originCity:@"Berlin"
+                                                                   originPostalCode:@"10178"
+                                                                      originCountry:@"Germany"
+                                                                        arrivalTime:nil
+                                                                destinationLatitude:52.5300641
+                                                               destinationLongitude:13.4008385
+                                                                    destinationName:@"Door2Door HQ"
+                                                                  destinationStreet:@"Torstrasse 109"
+                                                                    destinationCity:@"Berlin"
+                                                              destinationPostalCode:@"10119"
+                                                                 destinationCountry:@"Germany"];
+    
+  [D2DEventCollectionKit sendWithEvent:tripEvent];
 }
 
 

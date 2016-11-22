@@ -15,12 +15,12 @@ class TripTest: XCTestCase {
     func testValidateJSONOnlyWithRequiredParameterSet() {
         
         let origin = Place(latitude: 52.5300641,
-                           longitude: 13.4008385,
-                           name: "Door2Door HQ",
-                           street: "Torstrasse 109",
-                           city: "Berlin",
-                           postalCode:"10119",
-                           country: "Germany")
+                            longitude: 13.4008385,
+                            name: "Door2Door HQ",
+                            street: "Torstrasse 109",
+                            city: "Berlin",
+                            postalCode:"10119",
+                            country: "Germany")
         
         guard let originJSONRepresentation = origin.jsonRepresentation() else {
             
@@ -29,7 +29,6 @@ class TripTest: XCTestCase {
         }
         
         XCTAssertTrue(originJSONRepresentation.count == 7)
-        
         
         let destination = Place(latitude: 52.5230554,
                                 longitude: 13.4122575,
@@ -48,7 +47,29 @@ class TripTest: XCTestCase {
         XCTAssertTrue(destinationJSONRepresentation.count == 7)
         
         
-        let trip = Trip(origin: origin, destination: destination)
+        let departure = PlaceAtTime(place: origin, timestamp: nil)
+        
+        guard let departurejsonRepresentation = departure.jsonRepresentation() else {
+            
+            XCTAssertTrue(false)
+            return
+        }
+        
+        XCTAssertTrue(departurejsonRepresentation.count == 2)
+        
+        
+        let arrival = PlaceAtTime(place: destination, timestamp: nil)
+
+        guard let arrivaljsonRepresentation = arrival.jsonRepresentation() else {
+            
+            XCTAssertTrue(false)
+            return
+        }
+        
+        XCTAssertTrue(arrivaljsonRepresentation.count == 2)
+        
+        
+        let trip = Trip(departure: departure, arrival: arrival, modesOfTransportation: [ModesOfTransportation.taxi])
         
         guard let tripJSONRepresentation = trip.jsonRepresentation() else {
             
@@ -56,7 +77,10 @@ class TripTest: XCTestCase {
             return
         }
         
-        XCTAssertTrue(tripJSONRepresentation.count == 2)
+        XCTAssertTrue(tripJSONRepresentation.count == 3)
     }
+    
+    
+    
 }
 

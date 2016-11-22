@@ -16,6 +16,14 @@
 		8D0AF6321DC0BF7F0002DECD /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF6311DC0BF7F0002DECD /* Client.swift */; };
 		8D0AF6341DC0C0590002DECD /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF6331DC0C0590002DECD /* Trip.swift */; };
 		8D0AF6361DC0CC920002DECD /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF6351DC0CC920002DECD /* Place.swift */; };
+		8D2676011DD60F1C00A9C930 /* TripEvent+Begin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */; };
+		8D2676051DD60FC900A9C930 /* TripEvent+Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */; };
+		8D2676071DD6126700A9C930 /* TripEvent+Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676061DD6126700A9C930 /* TripEvent+Book.swift */; };
+		8D2676091DD6128900A9C930 /* TripEvent+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */; };
+		8D26760B1DD6129F00A9C930 /* TripEvent+End.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */; };
+		8D26760D1DD612B300A9C930 /* TripEvent+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */; };
+		8D3193C71DD389150078BC27 /* PlaceAtTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3193C61DD389150078BC27 /* PlaceAtTime.swift */; };
+		8D3193C91DD38AFC0078BC27 /* PlaceAtTimeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3193C81DD38AFC0078BC27 /* PlaceAtTimeTest.swift */; };
 		8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */; };
 		8D34DBD81DAD29930043754F /* D2DEventCollectionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */; };
@@ -24,9 +32,11 @@
 		8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */; };
 		8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4DD141DCB9AF6004194F7 /* TripTest.swift */; };
 		8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA82BD1DBF8E7F003017CB /* Event.swift */; };
+		8DBB11B91DD9FD5100830FD0 /* TripEventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */; };
+		8DBB11BD1DDA1AA200830FD0 /* ModesOfTransportationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB11BC1DDA1AA200830FD0 /* ModesOfTransportationTest.swift */; };
+		8DBB11BF1DDA1D1800830FD0 /* ActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB11BE1DDA1D1800830FD0 /* ActionTest.swift */; };
 		8DBC4E8F1DAD0D2100F16604 /* D2DEventCollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */; };
 		8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */; };
-		8DCCE3B81DCCA4FE0077B12C /* EventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */; };
 		8DCCE3C41DCCDE1A0077B12C /* EventRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */; };
 		8DCCE3C51DCCDE1E0077B12C /* TripSearchRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE3C11DCCDE140077B12C /* TripSearchRequestTest.swift */; };
 		8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */; };
@@ -55,8 +65,16 @@
 		8D08AF601DAD46E40019B45F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8D0AF62F1DC0BEF30002DECD /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8D0AF6311DC0BF7F0002DECD /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
-		8D0AF6331DC0C0590002DECD /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		8D0AF6331DC0C0590002DECD /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Trip.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8D0AF6351DC0CC920002DECD /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Begin.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Interest.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8D2676061DD6126700A9C930 /* TripEvent+Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Book.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Pay.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+End.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Cancel.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8D3193C61DD389150078BC27 /* PlaceAtTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAtTime.swift; sourceTree = "<group>"; };
+		8D3193C81DD38AFC0078BC27 /* PlaceAtTimeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAtTimeTest.swift; sourceTree = "<group>"; };
 		8D34DBD41DAD293F0043754F /* EventCollectionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKit.swift; sourceTree = "<group>"; };
 		8D34DBD71DAD29930043754F /* D2DEventCollectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D2DEventCollectionKit.h; sourceTree = "<group>"; };
 		8D87F25F1DAE918C00FC78EB /* EventCollectionKitConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionKitConfiguration.swift; sourceTree = "<group>"; };
@@ -65,18 +83,20 @@
 		8DB4DD111DCB9607004194F7 /* ISO8601DateTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateTest.swift; sourceTree = "<group>"; };
 		8DB4DD141DCB9AF6004194F7 /* TripTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTest.swift; sourceTree = "<group>"; };
 		8DBA82BD1DBF8E7F003017CB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TripEventTest.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8DBB11BC1DDA1AA200830FD0 /* ModesOfTransportationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModesOfTransportationTest.swift; sourceTree = "<group>"; };
+		8DBB11BE1DDA1D1800830FD0 /* ActionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTest.swift; sourceTree = "<group>"; };
 		8DBC4E851DAD0D2100F16604 /* D2DEventCollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D2DEventCollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC4E8E1DAD0D2100F16604 /* D2DEventCollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DEventCollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE3B41DCCA0590077B12C /* ErrorMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
-		8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTest.swift; sourceTree = "<group>"; };
 		8DCCE3C01DCCDE140077B12C /* EventRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequestTest.swift; sourceTree = "<group>"; };
 		8DCCE3C11DCCDE140077B12C /* TripSearchRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSearchRequestTest.swift; sourceTree = "<group>"; };
 		8DEC48A81DAD113B000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC48AB1DAD116E000B214D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DF3687A1DCA33C20088A730 /* EventRequest+TripSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventRequest+TripSearch.swift"; sourceTree = "<group>"; };
 		8DF3687B1DCA33C20088A730 /* EventRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
-		8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TripEvent+Search.swift"; sourceTree = "<group>"; };
-		8DF368801DCA37350088A730 /* TripEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripEvent.swift; sourceTree = "<group>"; };
+		8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Search.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8DF368801DCA37350088A730 /* TripEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TripEvent.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8DF65EE01DAF8712003ADF13 /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
 		8DF65EEB1DB12A32003ADF13 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,9 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */,
+				8DBB11BC1DDA1AA200830FD0 /* ModesOfTransportationTest.swift */,
 				8D06B4D01DCB94EB008130D2 /* PersonTest.swift */,
+				8D3193C81DD38AFC0078BC27 /* PlaceAtTimeTest.swift */,
 				8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */,
 				8DB4DD141DCB9AF6004194F7 /* TripTest.swift */,
+				8DBB11BE1DDA1D1800830FD0 /* ActionTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +140,7 @@
 				8D0AF6311DC0BF7F0002DECD /* Client.swift */,
 				8D0AF62F1DC0BEF30002DECD /* Person.swift */,
 				8D0AF6351DC0CC920002DECD /* Place.swift */,
+				8D3193C61DD389150078BC27 /* PlaceAtTime.swift */,
 				8D0AF6331DC0C0590002DECD /* Trip.swift */,
 			);
 			path = Model;
@@ -202,7 +226,7 @@
 		8DCCE3B61DCCA4EC0077B12C /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				8DCCE3B71DCCA4FE0077B12C /* EventTest.swift */,
+				8DBB11B81DD9FD5100830FD0 /* TripEventTest.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -257,8 +281,14 @@
 		8DF3687E1DCA37350088A730 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
-				8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */,
 				8DF368801DCA37350088A730 /* TripEvent.swift */,
+				8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */,
+				8D2676061DD6126700A9C930 /* TripEvent+Book.swift */,
+				8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */,
+				8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */,
+				8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */,
+				8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */,
+				8DF3687F1DCA37350088A730 /* TripEvent+Search.swift */,
 			);
 			path = Trip;
 			sourceTree = "<group>";
@@ -397,20 +427,27 @@
 				8DF368831DCA39030088A730 /* TripEvent+Search.swift in Sources */,
 				8DF3687C1DCA33C20088A730 /* EventRequest+TripSearch.swift in Sources */,
 				8D0AF6341DC0C0590002DECD /* Trip.swift in Sources */,
+				8D26760D1DD612B300A9C930 /* TripEvent+Cancel.swift in Sources */,
 				8D0AF6361DC0CC920002DECD /* Place.swift in Sources */,
 				8D0AF6301DC0BEF30002DECD /* Person.swift in Sources */,
 				8DBA82BE1DBF8E7F003017CB /* Event.swift in Sources */,
 				8DF368821DCA37350088A730 /* TripEvent.swift in Sources */,
 				8DB0FB511DCB544D00634467 /* Logger.swift in Sources */,
 				8D08AF611DAD46E40019B45F /* NetworkManager.swift in Sources */,
+				8D3193C71DD389150078BC27 /* PlaceAtTime.swift in Sources */,
 				8D0AF6321DC0BF7F0002DECD /* Client.swift in Sources */,
 				8D87F2601DAE918C00FC78EB /* EventCollectionKitConfiguration.swift in Sources */,
 				8DF65EE11DAF8712003ADF13 /* NSDate+ISO8601.swift in Sources */,
 				8D08AF5F1DAD30BF0019B45F /* EventCollectionKitProtocol.swift in Sources */,
+				8D2676091DD6128900A9C930 /* TripEvent+Pay.swift in Sources */,
 				8DCCE3B51DCCA0590077B12C /* ErrorMessages.swift in Sources */,
 				8DF65EEC1DB12A32003ADF13 /* Session.swift in Sources */,
+				8D2676011DD60F1C00A9C930 /* TripEvent+Begin.swift in Sources */,
+				8D2676051DD60FC900A9C930 /* TripEvent+Interest.swift in Sources */,
 				8DF3687D1DCA33C20088A730 /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
+				8D2676071DD6126700A9C930 /* TripEvent+Book.swift in Sources */,
+				8D26760B1DD6129F00A9C930 /* TripEvent+End.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,15 +455,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DCCE3B81DCCA4FE0077B12C /* EventTest.swift in Sources */,
 				8DB4DD151DCB9AF6004194F7 /* TripTest.swift in Sources */,
+				8DBB11BF1DDA1D1800830FD0 /* ActionTest.swift in Sources */,
 				8DB4DD131DCB9607004194F7 /* ISO8601DateTest.swift in Sources */,
+				8D3193C91DD38AFC0078BC27 /* PlaceAtTimeTest.swift in Sources */,
+				8DBB11B91DD9FD5100830FD0 /* TripEventTest.swift in Sources */,
 				8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */,
 				8DCCE3C41DCCDE1A0077B12C /* EventRequestTest.swift in Sources */,
 				8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */,
 				8DCCE3C51DCCDE1E0077B12C /* TripSearchRequestTest.swift in Sources */,
 				8DB4DD121DCB9607004194F7 /* EventCollectionKitConfigurationTest.swift in Sources */,
 				8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */,
+				8DBB11BD1DDA1AA200830FD0 /* ModesOfTransportationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

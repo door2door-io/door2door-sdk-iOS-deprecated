@@ -15,7 +15,6 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Private Properties
     // ------------------------------------------------------------------------------------------
-
     internal private(set) var configuration: EventCollectionKitConfiguration?
     
     private let networkManager = NetworkManager()
@@ -41,11 +40,11 @@ import Foundation
     // ------------------------------------------------------------------------------------------
     // MARK: Logging
     // ------------------------------------------------------------------------------------------
-    public class func enableLogging(loggingEnabled: Bool) {
+    public class func enable(logging: Bool) {
     
         if let configuration = EventCollectionKit.sharedInstance.configuration {
            
-            configuration.loggingEnabled = loggingEnabled
+            configuration.loggingEnabled = logging
         }
     }
     
