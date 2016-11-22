@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ModesOfTransportation: Int {
+@objc public enum ModesOfTransportation: Int {
     
     case train
     case walk
