@@ -40,7 +40,9 @@ In Build Settings, you can add user-defined variable like this:
 ![Target Dependecy](Documentation/img/Mapping.png)
 This step is needed if your environment variables are not using the xcode defaults. We recommend this step. 
 
-Next step is to go to your ``Framework Search Path`` and add following entry: ``$(BUILD_DIR)/$(FRAMEWORK_PATH_MAPPING)$(EFFECTIVE_PLATFORM_NAME)`` Thats it! 
+Next step is to go to your ``Framework Search Path`` and add following entry: ``$(BUILD_DIR)/$(FRAMEWORK_PATH_MAPPING)$(EFFECTIVE_PLATFORM_NAME)``
+
+Now go to your ``ApplicationDelegate`` and add the module import statement ``import D2DEventCollectionKit`` an thats it. 
 
 **Happy integrating!**
 ## 3. Guide
