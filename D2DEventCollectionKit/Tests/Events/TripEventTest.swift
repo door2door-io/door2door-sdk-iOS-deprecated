@@ -59,9 +59,13 @@ class TripEventTest: XCTestCase {
     
     
     func setupTransportationOptionsAsNumbers() {
-    
-        //TODO: Add the rest of the values here. Swift is strange! 
-        self.modesOfTransportationAsNumbers = [NSNumber(value: 0), NSNumber(value: 1), NSNumber(value: 2), NSNumber(value: 3)]
+        
+        self.modesOfTransportationAsNumbers = [NSNumber]()
+        
+        for index in 0...8 {
+            
+            self.modesOfTransportationAsNumbers.append(NSNumber(value: index))
+        }
     }
     
     
@@ -74,10 +78,10 @@ class TripEventTest: XCTestCase {
         XCTAssertTrue(modesOfTransportationEnums[1] == ModesOfTransportation.walk)
         XCTAssertTrue(modesOfTransportationEnums[2] == ModesOfTransportation.publicTransport)
         XCTAssertTrue(modesOfTransportationEnums[3] == ModesOfTransportation.carSharing)
-//        XCTAssertTrue(modesOfTransportationEnums[4] == ModesOfTransportation.bikeSharing)
-//        XCTAssertTrue(modesOfTransportationEnums[5] == ModesOfTransportation.taxi)
-//        XCTAssertTrue(modesOfTransportationEnums[6] == ModesOfTransportation.privateBike)
-//        XCTAssertTrue(modesOfTransportationEnums[7] == ModesOfTransportation.rideSharing)
-//        XCTAssertTrue(modesOfTransportationEnums[8] == ModesOfTransportation.other)
+        XCTAssertTrue(modesOfTransportationEnums[4] == ModesOfTransportation.bikeSharing)
+        XCTAssertTrue(modesOfTransportationEnums[5] == ModesOfTransportation.taxi)
+        XCTAssertTrue(modesOfTransportationEnums[6] == ModesOfTransportation.privateBike)
+        XCTAssertTrue(modesOfTransportationEnums[7] == ModesOfTransportation.rideSharing)
+        XCTAssertTrue(modesOfTransportationEnums[8] == ModesOfTransportation.other)
     }
 }

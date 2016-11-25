@@ -67,41 +67,67 @@ Once you have created an event like this you just need to send it by using the `
 
 	
 ## 3. Reference
-To make the SDK as easy to use as possible we have mapped the possible event types to class functions of type ``TripEvent``. A ``TripEvent`` can have multiple actions attached to it which defines the state for a trip. The list beneath shows the existing actions and their corresponding class functions for convenience.  
+To make the SDK as easy to use as possible we have mapped the possible event types to class functions of type ``TripEvent``. A ``TripEvent`` can have multiple actions attached to it which defines the state for a trip. The list beneath shows the existing actions and their corresponding class functions for convenience.    
+<br>
+Since the SDK supports ``Swift`` and ``Objective-C`` there are two convinience class functions per event implemented. One for ``Swift`` and one for ``Objective-C``. When using ``Swift`` you can potentially choose which one to use but we encourage to use the function with the typed signature where the ``modesOfTransportation`` is of type ``[ModesOfTransportation]``. The ``Objective-C`` implementation uses the signaturer ``modesOfTransportation`` with its type ``[NSNumber]`` 
+<br>
+The ``ModesOfTransportation`` swift enum defines the available modes of transportation and can be mapped into values from ``0 - 8`` which should be used as ``NSNumbers`` if you are using the SDK in ``Objective-C`` 
+<br>
+
+**For example** ``ModesOfTransportation.taxi`` in swift would map to the ``NSNumber`` ``@(ModesOfTransportationTaxi)`` using Objective-C
+<br>    
+
+	public enum ModesOfTransportation: Int {
+		case train // 0
+ 		case walk // 1
+	 	case publicTransport // 2
+    	case carSharing // 3
+    	case bikeSharing // 4
+    	case taxi // 5
+    	case privateBike // 6
+    	case rideSharing // 7
+    	case other // 8
+    }
+You can find the corresponding method signatures for``TripEvent`` events at ``Source/Events/Trip`` in the project. 
+<br>  
 
 #### Trip Search
+A user is searching how to get from A to B. 
 
 	TripEvent.tripSearchEvent(...)
 
 #### Trip Begin
-		
+A user starts getting from A to B.
+
 	TripEvent.tripBeginEvent(...)
 	
 #### Trip Book
+A user Books a trip from A to B.
 		
 	TripEvent.tripBookEvent(...)
 
 #### Trip Cancel
-		
+A user cancels a booked trip.
+	
 	TripEvent.tripCancelEvent(...)
 	
 #### Trip End
+A user reached his destination. 
 		
 	TripEvent.tripEndEvent(...)
 	
 #### Trip Interest
-		
+A user examins the details of search result. This happens if a search ends up with multiple results.
+
 	TripEvent.tripInterestEvent(...)
 	
 #### Trip Pay
+A user pays for a getting from A to B.
 		
 	TripEvent.tripPayEvent(...)
-	
-#### Trip Search
-		
-	TripEvent.tripSearchEvent(...)
-	
+
 
 ## 4. Support
 
-tech@door2door.io (Or something like that.)
+**Mail**: tech@door2door.io (Or something like that.) <br>
+**Web**: www.door2door.io
