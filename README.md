@@ -6,10 +6,11 @@ A **dependency free** plug and play API wrapper to send event data to the Door2D
 ##Table of contents
 
 1. [Technical requirements](#1.Technical Requirements)
-2. [Guide](#2.Guide)
-3. [Reference](#3.Reference)
-4. [Support](#4.Support) 
-5. [Todo](Documentation/todo.md)
+2. [Setup](#1.Setup)
+3. [Guide](#2.Guide)
+4. [Reference](#3.Reference)
+5. [Support](#4.Support) 
+6. [Todo](Documentation/todo.md)
 
 
 ## 1. Technical Requirements
@@ -23,7 +24,28 @@ The event collection API wrapper can be used with ``swift 3.x`` and higher as we
  * Use the ``Xcode project`` directly in your project
 
 
-## 2. Guide
+## 2 Setup
+
+**Manual Setup** <br>
+If you use our sdk without any dependency manager please drag the ``D2DEventCollectionKit.xcodeproj`` file into your project where you want to make use of the provided functionality. Go to your project settings and add set the ``Target Dependecy`` and ``Link Binary with Libraries`` like in the images shown beneath. Please set this for all the targets. 
+
+*Link Binary with Libraries*
+![Link Binary](Documentation/img/Link-Binary.png)
+
+*Target Dependecy*
+![Target Dependecy](Documentation/img/Target-Dependecy.png)
+
+In Build Settings, you can add user-defined variable like this: 
+*Framework Path Mapping*
+![Target Dependecy](Documentation/img/Mapping.png)
+This step is needed if your environment variables are not using the xcode defaults. We recommend this step. 
+
+Next step is to go to your ``Framework Search Path`` and add following entry: ``$(BUILD_DIR)/$(FRAMEWORK_PATH_MAPPING)$(EFFECTIVE_PLATFORM_NAME)``
+
+Now go to your ``ApplicationDelegate`` and add the module import statement ``import D2DEventCollectionKit`` an thats it. 
+
+**Happy integrating!**
+## 3. Guide
 
 Ones you are done with the integration of the sdk with your most beloved dependecy manager its time to use the sdk. Setting it up is pretty easy. The same applies for the use of the sdk when using Objective-C. The ``D2DEventCollectionKitDemoObjc`` demo shows you the integration process for Objective-C. 
 
@@ -66,7 +88,7 @@ Once you have created an event like this you just need to send it by using the `
         EventCollectionKit.send(event: tripSearchEvent)
 
 	
-## 3. Reference
+## 4. Reference
 To make the SDK as easy to use as possible we have mapped the possible event types to class functions of type ``TripEvent``. A ``TripEvent`` can have multiple actions attached to it which defines the state for a trip. The list beneath shows the existing actions and their corresponding class functions for convenience.    
 <br>
 Since the SDK supports ``Swift`` and ``Objective-C`` there are two convinience class functions per event implemented. One for ``Swift`` and one for ``Objective-C``. When using ``Swift`` you can potentially choose which one to use but we encourage to use the function with the typed signature where the ``modesOfTransportation`` is of type ``[ModesOfTransportation]``. The ``Objective-C`` implementation uses the signaturer ``modesOfTransportation`` with its type ``[NSNumber]`` 
@@ -127,7 +149,7 @@ A user pays for a getting from A to B.
 	TripEvent.tripPayEvent(...)
 
 
-## 4. Support
+## 5. Support
 
 **Mail**: tech@door2door.io (Or something like that.) <br>
 **Web**: www.door2door.io
