@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DAE10B41DEF167C002487F8 /* D2DEventCollectionKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DEC48D41DAD2442000B214D /* D2DEventCollectionKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DEC48BB1DAD2429000B214D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48BA1DAD2429000B214D /* AppDelegate.swift */; };
 		8DEC48BD1DAD2429000B214D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48BC1DAD2429000B214D /* MasterViewController.swift */; };
 		8DEC48BF1DAD2429000B214D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC48BE1DAD2429000B214D /* DetailViewController.swift */; };
@@ -17,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8DAE10B61DEF16C8002487F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DEC48CE1DAD2442000B214D /* D2DEventCollectionKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DBC4E841DAD0D2100F16604;
+			remoteInfo = D2DEventCollectionKit;
+		};
 		8DEC48D31DAD2442000B214D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8DEC48CE1DAD2442000B214D /* D2DEventCollectionKit.xcodeproj */;
@@ -32,6 +40,20 @@
 			remoteInfo = D2DEventCollectionKitTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DAE10B11DEF1665002487F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8DAE10B41DEF167C002487F8 /* D2DEventCollectionKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8DEC48B71DAD2429000B214D /* D2DEventCollectionKitDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2DEventCollectionKitDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,10 +129,12 @@
 				8DEC48B31DAD2429000B214D /* Sources */,
 				8DEC48B41DAD2429000B214D /* Frameworks */,
 				8DEC48B51DAD2429000B214D /* Resources */,
+				8DAE10B11DEF1665002487F8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8DAE10B71DEF16C8002487F8 /* PBXTargetDependency */,
 			);
 			name = D2DEventCollectionKitDemoSwift;
 			productName = D2DEventCollectionKitDemoSwift;
@@ -200,6 +224,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DAE10B71DEF16C8002487F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = D2DEventCollectionKit;
+			targetProxy = 8DAE10B61DEF16C8002487F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8DEC48C01DAD2429000B214D /* Main.storyboard */ = {

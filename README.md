@@ -23,24 +23,37 @@ The event collection API wrapper can be used with ``swift 3.x`` and higher as we
  * ``Carthage``
  * Use the ``Xcode project`` directly in your project
 
+To embed the ``D2DEventCollectionKit`` your project needs to have at least the following two build configurations a. ``Debug`` an b. ``Release``. You can have more if needed but at least these two should be present and used. 
+
+**Build configurations on a project level**
+![Link Binary](Documentation/img/Build-Configurations.png)
+
 
 ## 2 Setup
 
 **Manual Setup** <br>
-If you use our sdk without any dependency manager please drag the ``D2DEventCollectionKit.xcodeproj`` file into your project where you want to make use of the provided functionality. Go to your project settings and add set the ``Target Dependecy`` and ``Link Binary with Libraries`` like in the images shown beneath. Please set this for all the targets. 
+If you use our sdk without any dependency manager please drag the ``D2DEventCollectionKit.xcodeproj`` file into your project where you want to make use of the provided functionality. Go to your project settings and add set the ``Target Dependecy``, ``Link Binary with Libraries`` and ``Framework Path Mapping`` like in the images shown beneath. Please set these settings for all the targets you are using. 
 
-*Link Binary with Libraries*
+**Link Binary with Libraries**
 ![Link Binary](Documentation/img/Link-Binary.png)
 
-*Target Dependecy*
+**Target Dependecy**
 ![Target Dependecy](Documentation/img/Target-Dependecy.png)
 
-In Build Settings, you can add user-defined variable like this: 
-*Framework Path Mapping*
-![Target Dependecy](Documentation/img/Mapping.png)
-This step is needed if your environment variables are not using the xcode defaults. We recommend this step. 
+**Embeded Frameworks**
+![Embed Frameworks](Documentation/img/Embed-Frameworks.png)
 
-Next step is to go to your ``Framework Search Path`` and add following entry: ``$(BUILD_DIR)/$(FRAMEWORK_PATH_MAPPING)$(EFFECTIVE_PLATFORM_NAME)``
+In your ``Build Settings`` add (create by using the + symbol on top) a set of user-defined variables like this and name them ``FRAMEWORK_PATH_MAPPING`` like in the example beneath. On the right side the given build configurations can be used to do your mapping: ``Release`` and ``Debug``
+
+**Framework Path Mapping**
+![Target Dependecy](Documentation/img/Mapping.png)
+The right side shows your ``build configurations``. You need to map them one by one to the predifined ones by the SDK.
+
+This step is needed if your environment variables are not using the xcode defaults but we recommend this step. If you ran your project in Xcode's predifined settings, nothing is needed. *NOTE:* If you have multiple separate targets you need to specify these settings on a per target level.
+
+Once this is done, you neet to add the following variable to do the mapping: ``Framework Search Path`` and add following entry: 
+
+Set: ``$(BUILD_DIR)/$(FRAMEWORK_PATH_MAPPING)$(EFFECTIVE_PLATFORM_NAME)``
 
 Now go to your ``ApplicationDelegate`` and add the module import statement ``import D2DEventCollectionKit`` an thats it. 
 
