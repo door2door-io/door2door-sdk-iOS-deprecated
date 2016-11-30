@@ -15,7 +15,7 @@ A **dependency free** plug and play API wrapper to send event data to the Door2D
 
 ## 1. Technical Requirements
 
-The event collection API wrapper can be used with ``swift 3.x`` and higher as well as with ``Objective-C``. We also made it usale with your most beloved dependecy manager. You have the choice. 
+The event collection API wrapper can be used with ``Swift 3.x`` and higher as well as with ``Objective-C``. We also made it usable with your most beloved dependency manager. You have the choice. 
 
  * ``Swift 3.x``
  * ``Objective-C``
@@ -32,7 +32,7 @@ To embed the ``D2DEventCollectionKit`` your project needs to have at least the f
 ## 2 Setup
 
 **Manual Setup** <br>
-If you use our sdk without any dependency manager please drag the ``D2DEventCollectionKit.xcodeproj`` file into your project where you want to make use of the provided functionality. Go to your project settings and add set the ``Target Dependecy``, ``Link Binary with Libraries`` and ``Framework Path Mapping`` like in the images shown beneath. Please set these settings for all the targets you are using. 
+If you use our SDK without any dependency manager please drag the ``D2DEventCollectionKit.xcodeproj`` file into your project where you want to make use of the provided functionality. Go to your project settings and set the ``Target Dependency``, ``Link Binary with Libraries`` and ``Framework Path Mapping`` like in the images shown beneath. Please set these settings for all the targets you are using. 
 
 **Link Binary with Libraries**
 ![Link Binary](Documentation/img/Link-Binary.png)
@@ -43,24 +43,24 @@ If you use our sdk without any dependency manager please drag the ``D2DEventColl
 **Embeded Frameworks**
 ![Embed Frameworks](Documentation/img/Embed-Frameworks.png)
 
-In your ``Build Settings`` add (create by using the + symbol on top) a set of user-defined variables like this and name them ``FRAMEWORK_PATH_MAPPING`` like in the example beneath. On the right side the given build configurations can be used to do your mapping: ``Release`` and ``Debug``
+In your ``Build Settings`` add (create by using the + symbol on top) a set of user-defined variables like this and name them ``FRAMEWORK_PATH_MAPPING`` like in the example beneath. On the right side the given build configurations can be used to do your mapping: ``Release`` and ``Debug``.
 
 **Framework Path Mapping**
 ![Target Dependecy](Documentation/img/Mapping.png)
-The right side shows your ``build configurations``. You need to map them one by one to the predifined ones by the SDK.
+The right side shows your ``build configurations``. You need to map them one by one to the predefined ones used by the SDK.
 
-This step is needed if your environment variables are not using the xcode defaults but we recommend this step. If you ran your project in Xcode's predifined settings, nothing is needed. *NOTE:* If you have multiple separate targets you need to specify these settings on a per target level.
+This step is needed if your environment variables are not using the Xcode defaults but we recommend this step. If you ran your project in Xcode's predefined settings, nothing is needed. *NOTE:* If you have multiple separate targets you need to specify these settings on a per target level.
 
-Once this is done, you neet to add the following variable to do the mapping: ``Framework Search Path`` and add following entry: 
+Once this is done, you neet to add the following variable to do the mapping: ``Framework Search Path``, and add the following entry: 
 
 Set: ``$(BUILD_DIR)/$(FRAMEWORK_PATH_MAPPING)$(EFFECTIVE_PLATFORM_NAME)``
 
-Now go to your ``ApplicationDelegate`` and add the module import statement ``import D2DEventCollectionKit`` an thats it. 
+Now go to your ``ApplicationDelegate`` and add the module import statement ``import D2DEventCollectionKit`` an that's it. 
 
 **Happy integrating!**
 ## 3. Guide
 
-Ones you are done with the integration of the sdk with your most beloved dependecy manager its time to use the sdk. Setting it up is pretty easy. The same applies for the use of the sdk when using Objective-C. The ``D2DEventCollectionKitDemoObjc`` demo shows you the integration process for Objective-C. 
+Ones you are done with the integration of the SDK with your most beloved dependency manager it's time to use the SDK. Setting it up is pretty easy. The same applies for the use of the SDK when using Objective-C. The ``D2DEventCollectionKitDemoObjc`` demo shows you the integration process for Objective-C. 
 
 ###Setup
  
@@ -96,7 +96,7 @@ Creating and sending an event is pretty straight forward. To create an event for
                                                      destinationCountry: "Germany")
 
 ### Sending events
-Once you have created an event like this you just need to send it by using the ``EventCollectionKit`` ``send:`` function. Thats it. You can see the list of events and its parameter definitions in the sdk itself or you will find it in the [Reference section](#Reference) section
+Once you have created an event like this you just need to send it by using the ``EventCollectionKit`` ``send:`` function. That's it. You can see the list of events and its parameter definitions in the SDK itself or you will find it in the [Reference section](#Reference) section.
 
         EventCollectionKit.send(event: tripSearchEvent)
 
@@ -104,12 +104,12 @@ Once you have created an event like this you just need to send it by using the `
 ## 4. Reference
 To make the SDK as easy to use as possible we have mapped the possible event types to class functions of type ``TripEvent``. A ``TripEvent`` can have multiple actions attached to it which defines the state for a trip. The list beneath shows the existing actions and their corresponding class functions for convenience.    
 <br>
-Since the SDK supports ``Swift`` and ``Objective-C`` there are two convinience class functions per event implemented. One for ``Swift`` and one for ``Objective-C``. When using ``Swift`` you can potentially choose which one to use but we encourage to use the function with the typed signature where the ``modesOfTransportation`` is of type ``[ModesOfTransportation]``. The ``Objective-C`` implementation uses the signaturer ``modesOfTransportation`` with its type ``[NSNumber]`` 
+Since the SDK supports ``Swift`` and ``Objective-C`` there are two convinience class functions per event implemented. One for ``Swift`` and one for ``Objective-C``. When using ``Swift`` you can potentially choose which one to use but we encourage using the function with the typed signature where the ``modesOfTransportation`` is of type ``[ModesOfTransportation]``. The ``Objective-C`` implementation uses the signature ``modesOfTransportation`` with its type ``[NSNumber]``. 
 <br>
-The ``ModesOfTransportation`` swift enum defines the available modes of transportation and can be mapped into values from ``0 - 8`` which should be used as ``NSNumbers`` if you are using the SDK in ``Objective-C`` 
+The ``ModesOfTransportation`` swift enum defines the available modes of transportation and can be mapped into values from ``0 - 8`` which should be used as ``NSNumber``'s if you are using the SDK in ``Objective-C``. 
 <br>
 
-**For example** ``ModesOfTransportation.taxi`` in swift would map to the ``NSNumber`` ``@(ModesOfTransportationTaxi)`` using Objective-C
+**For example** ``ModesOfTransportation.taxi`` in swift would map to the ``NSNumber`` ``@(ModesOfTransportationTaxi)`` using Objective-C.
 <br>    
 
 	public enum ModesOfTransportation: Int {
@@ -123,7 +123,7 @@ The ``ModesOfTransportation`` swift enum defines the available modes of transpor
     	case rideSharing // 7
     	case other // 8
     }
-You can find the corresponding method signatures for``TripEvent`` events at ``Source/Events/Trip`` in the project. 
+You can find the corresponding method signatures for ``TripEvent`` events at ``Source/Events/Trip`` in the project. 
 <br>  
 
 #### Trip Search
@@ -137,7 +137,7 @@ A user starts getting from A to B.
 	TripEvent.tripBeginEvent(...)
 	
 #### Trip Book
-A user Books a trip from A to B.
+A user books a trip from A to B.
 		
 	TripEvent.tripBookEvent(...)
 
@@ -147,17 +147,17 @@ A user cancels a booked trip.
 	TripEvent.tripCancelEvent(...)
 	
 #### Trip End
-A user reached his destination. 
+A user reached their destination. 
 		
 	TripEvent.tripEndEvent(...)
 	
 #### Trip Interest
-A user examins the details of search result. This happens if a search ends up with multiple results.
+A user examines the details of a search result. This happens if a search returns multiple results.
 
 	TripEvent.tripInterestEvent(...)
 	
 #### Trip Pay
-A user pays for a getting from A to B.
+A user pays for getting from A to B.
 		
 	TripEvent.tripPayEvent(...)
 
