@@ -18,7 +18,6 @@
 		8D0AF6361DC0CC920002DECD /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AF6351DC0CC920002DECD /* Place.swift */; };
 		8D2676011DD60F1C00A9C930 /* TripEvent+Begin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */; };
 		8D2676051DD60FC900A9C930 /* TripEvent+Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */; };
-		8D2676071DD6126700A9C930 /* TripEvent+Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676061DD6126700A9C930 /* TripEvent+Book.swift */; };
 		8D2676091DD6128900A9C930 /* TripEvent+Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */; };
 		8D26760B1DD6129F00A9C930 /* TripEvent+End.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */; };
 		8D26760D1DD612B300A9C930 /* TripEvent+Cancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */; };
@@ -69,7 +68,6 @@
 		8D0AF6351DC0CC920002DECD /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Begin.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Interest.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		8D2676061DD6126700A9C930 /* TripEvent+Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Book.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8D2676081DD6128900A9C930 /* TripEvent+Pay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Pay.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+End.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "TripEvent+Cancel.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -283,7 +281,6 @@
 			children = (
 				8DF368801DCA37350088A730 /* TripEvent.swift */,
 				8D2676001DD60F1C00A9C930 /* TripEvent+Begin.swift */,
-				8D2676061DD6126700A9C930 /* TripEvent+Book.swift */,
 				8D26760C1DD612B300A9C930 /* TripEvent+Cancel.swift */,
 				8D26760A1DD6129F00A9C930 /* TripEvent+End.swift */,
 				8D2676041DD60FC900A9C930 /* TripEvent+Interest.swift */,
@@ -446,7 +443,6 @@
 				8D2676051DD60FC900A9C930 /* TripEvent+Interest.swift in Sources */,
 				8DF3687D1DCA33C20088A730 /* EventRequest.swift in Sources */,
 				8D34DBD51DAD293F0043754F /* EventCollectionKit.swift in Sources */,
-				8D2676071DD6126700A9C930 /* TripEvent+Book.swift in Sources */,
 				8D26760B1DD6129F00A9C930 /* TripEvent+End.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
