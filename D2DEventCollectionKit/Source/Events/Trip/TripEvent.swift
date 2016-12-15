@@ -13,7 +13,6 @@ public enum Action {
     
     case search
     case interest
-    case book
     case begin
     case pay
     case end
@@ -26,8 +25,6 @@ public enum Action {
                 return "search"
             case .interest:
                 return "interest"
-            case .book:
-                return "book"
             case .begin:
                 return "begin"
             case .pay:
