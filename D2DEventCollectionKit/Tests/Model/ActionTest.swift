@@ -29,14 +29,6 @@ class ActionTest: XCTestCase {
     }
     
     
-    func testMapBookActionEnumToStringValue() {
-        
-        let action = Action.book
-        
-        XCTAssertTrue(action.stringRepresentation() == "book")
-    }
-    
-    
     func testMapBeginActionEnumToStringValue() {
         
         let action = Action.begin

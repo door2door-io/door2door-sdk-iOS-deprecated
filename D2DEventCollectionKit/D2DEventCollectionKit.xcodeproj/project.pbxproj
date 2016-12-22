@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D01FEAA1E0C015700A37400 /* Buildnumber.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8D01FEA91E0C015700A37400 /* Buildnumber.sh */; };
 		8D06B4D21DCB94EB008130D2 /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */; };
 		8D06B4D31DCB94EB008130D2 /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4D01DCB94EB008130D2 /* PersonTest.swift */; };
 		8D06B4D41DCB94EB008130D2 /* PlaceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D01FEA91E0C015700A37400 /* Buildnumber.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Buildnumber.sh; sourceTree = "<group>"; };
 		8D06B4CF1DCB94EB008130D2 /* ClientTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
 		8D06B4D01DCB94EB008130D2 /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
 		8D06B4D11DCB94EB008130D2 /* PlaceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTest.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D01FEA81E0C015700A37400 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				8D01FEA91E0C015700A37400 /* Buildnumber.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		8D06B4CE1DCB94EB008130D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,9 +199,10 @@
 		8DBC4E7B1DAD0D2100F16604 = {
 			isa = PBXGroup;
 			children = (
+				8DBC4E861DAD0D2100F16604 /* Products */,
+				8D01FEA81E0C015700A37400 /* Scripts */,
 				8DBC4E9F1DAD0E1D00F16604 /* Source */,
 				8DEC48A21DAD1005000B214D /* Tests */,
-				8DBC4E861DAD0D2100F16604 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -326,6 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DBC4E991DAD0D2100F16604 /* Build configuration list for PBXNativeTarget "D2DEventCollectionKit" */;
 			buildPhases = (
+				8D01FEAB1E0C018300A37400 /* Build Number Increment */,
 				8DBC4E801DAD0D2100F16604 /* Sources */,
 				8DBC4E811DAD0D2100F16604 /* Frameworks */,
 				8DBC4E821DAD0D2100F16604 /* Headers */,
@@ -404,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D01FEAA1E0C015700A37400 /* Buildnumber.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +428,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D01FEAB1E0C018300A37400 /* Build Number Increment */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Number Increment";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./Scripts/Buildnumber.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DBC4E801DAD0D2100F16604 /* Sources */ = {
