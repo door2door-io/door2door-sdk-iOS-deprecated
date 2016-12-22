@@ -23,8 +23,10 @@ The event collection API wrapper can be used with ``Swift 3.x`` and higher as we
  * ``Carthage``
  * Use the ``Xcode project`` directly in your project
 
-To embed the ``D2DEventCollectionKit`` your project needs to have at least the following two build configurations a. ``Debug`` an b. ``Release``. You can have more if needed but at least these two should be present and used. 
+**Demo projects:** Please also check the demo projects to see how to implement the SDK, set it up, create an event and send it to the backend. There is one demo project for ``Objective-C`` and one for ``Swift`` based implementations. 
 
+To embed the ``D2DEventCollectionKit`` your project needs to have at least the following two build configurations a. ``Debug`` an b. ``Release``. You can have more if needed but at least these two should be present and used. 
+ 
 **Build configurations on a project level**
 ![Link Binary](Documentation/img/Build-Configurations.png)
 
@@ -33,7 +35,27 @@ To embed the ``D2DEventCollectionKit`` your project needs to have at least the f
 
 Choose the way you want to integrate the SDK into your project. 
 
-###2.1 Manual Setup <br>
+###2.1 CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+	$ gem install cocoapods
+
+To integrate D2DEventCollectionKit into your Xcode project using CocoaPods, specify it in your Podfile:
+
+	source 'https://github.com/CocoaPods/Specs.git'
+	platform :ios, '10.0'
+	use_frameworks!
+	
+	target '<Your Target Name>' do
+    	pod 'D2DEventCollectionKit', '~> 0.1.1'
+	end
+
+Then, run the following command:
+
+	$ pod install
+
+###2.2 Manual Setup <br>
 If you use our SDK without any dependency manager please drag the ``D2DEventCollectionKit.xcodeproj`` file into your project where you want to make use of the provided functionality. Go to your project settings and set the ``Target Dependency``, ``Link Binary with Libraries`` and ``Framework Path Mapping`` like in the images shown beneath. Please set these settings for all the targets you are using. 
 
 **Link Binary with Libraries**
@@ -78,6 +100,9 @@ Once this is done you can enable/disable debug output. The debug output is disab
 	
 ### Create Events
 Creating and sending an event is pretty straight forward. To create an event for a ``route`` with its action ``search`` you use the convenience method on the ``TripEvent`` object like in the example beneath. 
+
+**Note:** *To be as accurate as possible we encourage you to provide coordinate data for ``latitude`` and ``longitude`` for the tracking. If you can't provide concrete data for the 2 fields please send ``0.0`` for each field and specify the ``address`` fields.*
+
 
 	let tripSearchEvent  = TripEvent.tripSearchEvent(modesOfTransportation:[.train, .taxi],
                                                      departureTime: Date(),
@@ -137,11 +162,6 @@ A user is searching how to get from A to B.
 A user starts getting from A to B.
 
 	TripEvent.tripBeginEvent(...)
-	
-#### Trip Book
-A user books a trip from A to B.
-		
-	TripEvent.tripBookEvent(...)
 
 #### Trip Cancel
 A user cancels a booked trip.
@@ -166,5 +186,5 @@ A user pays for getting from A to B.
 
 ## 5. Support
 
-**Mail**: tech@door2door.io (Or something like that.) <br>
+**Mail**: technical-support@door2door.io <br>
 **Web**: www.door2door.io

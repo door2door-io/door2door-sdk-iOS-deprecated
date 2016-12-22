@@ -26,7 +26,7 @@ class TripSearchRequestTest: XCTestCase {
             return
         }
         
-        XCTAssertTrue(url.absoluteURL.absoluteString == "https://events-dev.d2di.net/v1/trips")
+        XCTAssertTrue(url.absoluteURL.absoluteString == "https://events.d2di.net/v1/trips")
     }
 }
 
