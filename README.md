@@ -99,6 +99,9 @@ Once this is done you can enable/disable debug output. The debug output is disab
 ### Create Events
 Creating and sending an event is pretty straight forward. To create an event for a ``route`` with its action ``search`` you use the convenience method on the ``TripEvent`` object like in the example beneath. 
 
+**Note:** *To be as accurate as possible we encourage you to provide coordinate data for ``latitude`` and ``longitude`` for the tracking. If you can't provide concrete data for the 2 fields please send ``0.0`` for each field and specify the ``address`` fields.*
+
+
 	let tripSearchEvent  = TripEvent.tripSearchEvent(modesOfTransportation:[.train, .taxi],
                                                      departureTime: Date(),
                                                      originLatitude: 52.5230554,
@@ -157,11 +160,6 @@ A user is searching how to get from A to B.
 A user starts getting from A to B.
 
 	TripEvent.tripBeginEvent(...)
-	
-#### Trip Book
-A user books a trip from A to B.
-		
-	TripEvent.tripBookEvent(...)
 
 #### Trip Cancel
 A user cancels a booked trip.
@@ -186,5 +184,5 @@ A user pays for getting from A to B.
 
 ## 5. Support
 
-**Mail**: tech@door2door.io (Or something like that.) <br>
+**Mail**: technical-support@door2door.io <br>
 **Web**: www.door2door.io
