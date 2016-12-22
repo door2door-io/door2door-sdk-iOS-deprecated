@@ -33,7 +33,27 @@ To embed the ``D2DEventCollectionKit`` your project needs to have at least the f
 
 Choose the way you want to integrate the SDK into your project. 
 
-###2.1 Manual Setup <br>
+###2.1 CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+	$ gem install cocoapods
+
+To integrate D2DEventCollectionKit into your Xcode project using CocoaPods, specify it in your Podfile:
+
+	source 'https://github.com/CocoaPods/Specs.git'
+	platform :ios, '10.0'
+	use_frameworks!
+	
+	target '<Your Target Name>' do
+    	pod 'D2DEventCollectionKit', '~> 0.1.1'
+	end
+
+Then, run the following command:
+
+	$ pod install
+
+###2.2 Manual Setup <br>
 If you use our SDK without any dependency manager please drag the ``D2DEventCollectionKit.xcodeproj`` file into your project where you want to make use of the provided functionality. Go to your project settings and set the ``Target Dependency``, ``Link Binary with Libraries`` and ``Framework Path Mapping`` like in the images shown beneath. Please set these settings for all the targets you are using. 
 
 **Link Binary with Libraries**
