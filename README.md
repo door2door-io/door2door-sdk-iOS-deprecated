@@ -23,8 +23,10 @@ The event collection API wrapper can be used with ``Swift 3.x`` and higher as we
  * ``Carthage``
  * Use the ``Xcode project`` directly in your project
 
-To embed the ``D2DEventCollectionKit`` your project needs to have at least the following two build configurations a. ``Debug`` an b. ``Release``. You can have more if needed but at least these two should be present and used. 
+**Demo projects:** Please also check the demo projects how to implement the SDK, set it up, create an event and send it to the backend. There is one demo project for ``Objective-C`` and one for ``Swift`` based implementations. 
 
+To embed the ``D2DEventCollectionKit`` your project needs to have at least the following two build configurations a. ``Debug`` an b. ``Release``. You can have more if needed but at least these two should be present and used. 
+ 
 **Build configurations on a project level**
 ![Link Binary](Documentation/img/Build-Configurations.png)
 
