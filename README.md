@@ -9,9 +9,7 @@ A **dependency free** plug and play API wrapper to send event data to the Door2D
 2. [Setup](#1.Setup)
 3. [Guide](#2.Guide)
 4. [Reference](#3.Reference)
-5. [Support](#4.Support) 
-6. [Todo](Documentation/todo.md)
-
+5. [License](#3.Reference)
 
 ## 1. Technical Requirements
 
@@ -183,8 +181,6 @@ A user pays for getting from A to B.
 		
 	TripEvent.tripPayEvent(...)
 
+## 5. License
+D2DEventCollectionKit is released under the MIT license. See LICENSE for details.
 
-## 5. Support
-
-**Mail**: technical-support@door2door.io <br>
-**Web**: www.door2door.io
