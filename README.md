@@ -6,10 +6,10 @@ A **dependency free** plug and play API wrapper to send event data to the Door2D
 ##Table of contents
 
 1. [Technical requirements](#1.Technical Requirements)
-2. [Setup](#1.Setup)
-3. [Guide](#2.Guide)
-4. [Reference](#3.Reference)
-5. [License](#3.Reference)
+2. [Setup](#2-setup)
+3. [Guide](#2-Guide)
+4. [Reference](#3-Reference)
+5. [License](#3-License)
 
 ## 1. Technical Requirements
 
