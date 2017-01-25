@@ -3,11 +3,11 @@ A **dependency free** plug and play API wrapper to send event data to the Door2D
 	
 ##Table of contents
 
-1. Technical requirements
-2. Setup
-3. Guide
-4. Reference
-5. License
+1. [Technical requirements] (#1-technical-requirements)
+2. [Setup] (#2-setup)
+3. [Guide] (#3-guide)
+4. [Reference] (#4-reference)
+5. [License] (#5-license)
 
 
 ## 1. Technical Requirements
