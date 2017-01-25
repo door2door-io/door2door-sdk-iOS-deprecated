@@ -17,7 +17,6 @@ The event collection API wrapper can be used with ``Swift 3.x`` and higher as we
  * ``Swift 3.x``
  * ``Objective-C``
  * ``Cocoapods``
- * ``Carthage``
  * Use the ``Xcode project`` directly in the project
 
 **Demo projects:** Please check the demo projects to see how to implement the SDK, set it up, create an event and send it to the backend. There is one demo project for ``Objective-C`` and another for ``Swift`` based implementations. 
