@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'D2DEventCollectionKit'
   s.version          = '0.2.0'
-  s.summary          = 'A dependency free iOS SDK for using the Door2Door mobility analytics.'
+  s.summary          = 'A dependency-free iOS SDK for using the Door2Door mobility analytics.'
   s.homepage         = 'https://github.com/door2door-io/door2door-sdk-iOS'
   s.license 		 = 'MIT'
   s.author           = { 'Elmar Tampe' => 'elmar@door2door.io' }
