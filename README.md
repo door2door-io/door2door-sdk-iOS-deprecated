@@ -1,5 +1,5 @@
 # D2DEventCollectionKit
-A **dependency free** plug and play API wrapper to send event data to the Door2Door event collection backend for mobility events.
+A **dependency free** iOS SDK for using the Door2Door mobility analytics.
 	
 ##Table of contents
 
