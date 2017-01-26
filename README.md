@@ -1,5 +1,5 @@
 # D2DEventCollectionKit
-A **dependency free** iOS SDK for using the Door2Door mobility analytics.
+A **dependency-free** iOS SDK for using the Door2Door mobility analytics.
 	
 ##Table of contents
 
@@ -149,7 +149,7 @@ The ``ModesOfTransportation`` Swift enum defines the available modes of transpor
 The corresponding method signatures for ``TripEvent`` events can be found at ``Source/Events/Trip`` in the project.  
 
 #### Trip Search
-A user is searching how to get from A to B. 
+A user is searching for how to get from A to B. 
 
 	TripEvent.tripSearchEvent(...)
 
@@ -164,7 +164,7 @@ A user cancels a booked trip.
 	TripEvent.tripCancelEvent(...)
 	
 #### Trip End
-A user reached their destination. 
+A user reaches their destination. 
 		
 	TripEvent.tripEndEvent(...)
 	
