@@ -179,4 +179,4 @@ A user pays for getting from A to B.
 	TripEvent.tripPayEvent(...)
 
 ## 5. License
-D2DEventCollectionKit is released under the MIT license. See LICENSE for details.
+For license details see [License](LICENSE).
