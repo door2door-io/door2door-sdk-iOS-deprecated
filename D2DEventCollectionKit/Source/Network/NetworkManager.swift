@@ -72,7 +72,6 @@ class NetworkManager {
             }
                     
             eventTask.resume()
-            self.dataSession.finishTasksAndInvalidate()
 
         } catch  {
             
