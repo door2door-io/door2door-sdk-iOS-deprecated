@@ -41,14 +41,12 @@ class NetworkManager {
                 }
                 else {
                     
-                    if let response = response {
-                    
-                        let httpResponse = response as! HTTPURLResponse
+                    if let httpResponse = response as? HTTPURLResponse {
 
                         if httpResponse.statusCode == 202 {
                         
                             self.printResponseDivider()
-                            Logger.printString(string: "Succcessfully send event data.")
+                            Logger.printString(string: "Succcessfully sent event data.")
                         }
                         else {
                         
