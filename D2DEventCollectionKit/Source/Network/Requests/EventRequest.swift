@@ -18,13 +18,13 @@ class EventRequest: NSMutableURLRequest {
         
         self.init(url: url, cachePolicy:.useProtocolCachePolicy, timeoutInterval: 60.0)
         
-        self.setHTTPHeaderFields()
+        self.addHTTPHeaderFields()
         self.setJSONBody(jsonPayload: jsonPayload)
     }
     
     
     override init(url URL: URL, cachePolicy: NSURLRequest.CachePolicy, timeoutInterval: TimeInterval) {
-    
+        
         super.init(url: URL, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
     }
     
@@ -39,7 +39,7 @@ class EventRequest: NSMutableURLRequest {
     // MARK: Base URL
     // ------------------------------------------------------------------------------------------
     public class func baseURLString() -> String {
-    
+        
         return "https://events.d2di.net"
     }
     
@@ -48,7 +48,7 @@ class EventRequest: NSMutableURLRequest {
     // MARK: JSON Body
     // ------------------------------------------------------------------------------------------
     private func setJSONBody(jsonPayload: Data) {
-    
+        
         self.httpBody = jsonPayload
     }
     
@@ -56,11 +56,34 @@ class EventRequest: NSMutableURLRequest {
     // ------------------------------------------------------------------------------------------
     // MARK: HTTP Header
     // ------------------------------------------------------------------------------------------
-    private func setHTTPHeaderFields() {
+    private func addHTTPHeaderFields() {
+        
+        self.addJsonHeaderFields()
+        self.addAcceptEncodingHeaderField()
+        self.addAuthorizationHeaderField()
+    }
+    
+    
+    private func addJsonHeaderFields() {
         
         self.addValue("application/json", forHTTPHeaderField: "Content-Type")
         self.addValue("application/json", forHTTPHeaderField: "Accept")
+    }
+    
+    
+    private func addAcceptEncodingHeaderField() {
+        
         self.addValue("gzip.identity", forHTTPHeaderField: "Accept-Encoding")
-        self.addValue("YOUR_APP_TOKEN", forHTTPHeaderField: "X-User-Token")
+    }
+    
+    
+    private func addAuthorizationHeaderField() {
+        
+        if let applicationToken = EventCollectionKit.sharedInstance
+            .configuration?
+            .applicationToken {
+            
+            self.addValue("Bearer \(applicationToken)", forHTTPHeaderField: "Authorization")
+        }
     }
 }
