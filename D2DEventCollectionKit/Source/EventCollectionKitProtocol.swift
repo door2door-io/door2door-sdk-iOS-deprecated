@@ -13,11 +13,11 @@ protocol EventCollectionKitProtocol {
     /**
         This method sets up the EventCollectionKit and register a given token to it.
      
-        - Parameter withAppToken:A 32 character long string provided by D2D.
+        - Parameter withAppToken: A 32 character long string provided by D2D.
         - Parameter applicationName: The name of your application.
         - Parameter applicationVersion: The version number of your application.
     */
-    static func register(applicationToken: String, applicationName: String, applicationVersion: String?)
+    static func register(applicationToken: String?, applicationName: String, applicationVersion: String?)
 
     
     /**

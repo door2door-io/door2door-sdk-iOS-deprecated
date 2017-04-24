@@ -28,8 +28,9 @@ public class EventCollectionKitConfiguration {
             if let configuration = EventCollectionKit.sharedInstance.configuration {
                 
                 let versionString = configuration.applicationVersion ?? "Version not set"
+                let applicationToken = configuration.applicationToken ?? "Application Token not set"
                 
-                Logger.printString(string: "Token: " + configuration.applicationToken + "\n" +
+                Logger.printString(string: "Token: " + applicationToken + "\n" +
                                             "Name: " + configuration.applicationName + "\n" +
                                             "Version: " + versionString + "\n")
             }
