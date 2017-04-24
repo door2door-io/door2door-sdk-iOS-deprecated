@@ -13,7 +13,7 @@ public class EventCollectionKitConfiguration {
     // ------------------------------------------------------------------------------------------
     // MARK: Properties
     // ------------------------------------------------------------------------------------------
-    public private(set) var applicationToken: String
+    public private(set) var applicationToken: String?
     public private(set) var applicationName: String
     public private(set) var applicationVersion: String?
     
@@ -40,7 +40,7 @@ public class EventCollectionKitConfiguration {
     // ------------------------------------------------------------------------------------------
     // MARK: Initializer
     // ------------------------------------------------------------------------------------------
-    init(applicationToken: String, applicationName: String, applicationVersion: String?) {
+    init(applicationToken: String?, applicationName: String, applicationVersion: String?) {
         
         self.loggingEnabled = false
         
