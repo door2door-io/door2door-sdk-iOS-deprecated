@@ -1,7 +1,7 @@
 # D2DEventCollectionKit
 A **dependency-free** iOS SDK for using the Door2Door mobility analytics.
 	
-##Table of contents
+## Table of contents
 
 1. [Technical requirements] (#1-technical-requirements)
 2. [Setup] (#2-setup)
@@ -31,7 +31,7 @@ To embed the ``D2DEventCollectionKit``, the project needs to have at least the f
 
 Choose a way to integrate the SDK into a project. 
 
-###2.1 CocoaPods
+### 2.1 CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. It can be installed with the following command:
 
@@ -51,7 +51,7 @@ Then run the following command:
 
 	$ pod install
 
-###2.2 Manual Setup
+### 2.2 Manual Setup
 To use the SDK without any dependency manager, drag the ``D2DEventCollectionKit.xcodeproj`` file into the project requiring the provided functionality. Go to the project settings and set the ``Target Dependency``, ``Link Binary with Libraries`` and ``Framework Path Mapping`` as shown in the images below. Set these settings for all the targets being used. 
 
 **Link Binary with Libraries**
@@ -84,7 +84,7 @@ Now go to ``ApplicationDelegate`` and add the module import statement ``import D
 
 The SDK will be available to use after it has been integrated with a compatible dependency manager. Setting it up is fairly straightforward. The same applies for the use of the SDK when using Objective-C. The ``D2DEventCollectionKitDemoObjc`` demo shows the integration process for Objective-C. 
 
-###Setup
+### Setup
  
 Implement the following in the application delegate:
 
